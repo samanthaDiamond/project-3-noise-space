@@ -1,0 +1,25 @@
+Getting started with Tessel
+
+Advantages:
+No wires
+Programmable with JS
+Wifi
+Can download module (lib) that tessel interacts with
+
+Initial project:
+T2 init
+
+tesselWebSocket:
+t2 init
+npm install ambient-attx4 (do for every project)
+npm install nodejs-websocket
+create client.js and server.js files in tesselWebSocket
+
+
+csv
+npm install csv
+
+
+
+DIFFICULTIES:
+running node on windows
