@@ -1,11 +1,6 @@
 // TODO: stop refreshWhitenoise callback once canvas removed
 
-function refreshWhitenoise() {
-  drawCells();
-  setTimeout(function(){
-    refreshWhitenoise();
-  }, 100);
-}
+var drawCellsInterval = setInterval(drawCells, 100);
 
 function drawCells() {
   var ctx = document.getElementById('canvasCells').getContext('2d');
@@ -20,7 +15,8 @@ function drawCells() {
 
 function fadeOutWhitenoiseFadeInheading() {
   $("#canvasCells").delay(3000).fadeOut(5000, function() {
-    // $("#canvasCells").remove();
+    clearInterval(drawCellsInterval);
+    $("#canvasCells").remove();
     fadeInHeading();
   });
 }
@@ -28,3 +24,40 @@ function fadeOutWhitenoiseFadeInheading() {
 function fadeInHeading() {
   $('body').append('<h1 class="NoiseSpace-title">NoiseSpace.</h1>');
 }
+
+
+// function refreshWhitenoise() {
+//   drawCells();
+//   setTimeout(function(){
+//     refreshWhitenoise();
+//   }, 100);
+// }
+
+// function refreshWhitenoise() {
+//   drawCellsInterval();
+// }
+
+// function setIntervalX(callback, delay, repetitions) {
+//     var x = 0;
+//     var intervalID = window.setInterval(function () {
+//
+//        callback();
+//
+//        if (++x === repetitions) {
+//            window.clearInterval(intervalID);
+//            fadeOutWhitenoiseFadeInheading()
+//
+//        }
+//     }, delay);
+// }
+
+// function drawCellsInterval(callback, delay, repetitions) {
+//   var reps = 0;
+//   var intervalID = setInterval(function () {
+//     drawCells();
+//     if (++reps === repetitions) {
+//       clearInterval(intervalID);
+//       fadeOutWhitenoiseFadeInheading();
+//     }
+//   }, delay);
+// }
