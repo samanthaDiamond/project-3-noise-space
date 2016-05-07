@@ -6716,3 +6716,123 @@ Started GET "/measurements/data.json" for ::1 at 2016-05-07 19:35:35 +1000
 Processing by MeasurementsController#fetch_measurement_data as JSON
   [1m[36mMeasurement Load (0.8ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
 Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-07 19:51:37 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 283ms (Views: 282.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/_pages.self-258026cdcb3913024dce4b6da4b60a150edad4adcb95ef4810d2db6c78cff710.css?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/main.self-258026cdcb3913024dce4b6da4b60a150edad4adcb95ef4810d2db6c78cff710.css?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/data_visualisation.self-a1c7ee16bac21833fa0ea4fd2a3b3519aaa7161eb6c78f4ca8f553bd63d125a1.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/page_intro.self-c1ce1ad11419a4b47eedc2c5d9d1a65e92a9d5d13a367a73327222c8e2dbba36.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-07 19:51:37 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-07 19:51:38 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (0.6ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-05-07 19:52:41 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/_pages.self-258026cdcb3913024dce4b6da4b60a150edad4adcb95ef4810d2db6c78cff710.css?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/main.self-258026cdcb3913024dce4b6da4b60a150edad4adcb95ef4810d2db6c78cff710.css?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/data_visualisation.self-a1c7ee16bac21833fa0ea4fd2a3b3519aaa7161eb6c78f4ca8f553bd63d125a1.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/page_intro.self-c1ce1ad11419a4b47eedc2c5d9d1a65e92a9d5d13a367a73327222c8e2dbba36.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-07 19:52:41 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-07 19:52:42 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (0.5ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms)

@@ -21,7 +21,7 @@ function draw(dataset) {
     .domain(x_extent);
 
   var y_extent = d3.extent(dataset, function(d){
-    return d.sound;
+    return d.dB;
   });
 
   var y_scale = d3.scale.linear()
@@ -30,7 +30,7 @@ function draw(dataset) {
 
   d3.selectAll("circle")
     .attr("cx", function(d){return x_scale(d.datetime);})
-    .attr("cy", function(d){return y_scale(d.sound);})
+    .attr("cy", function(d){return y_scale(d.dB);})
     .attr("r", 4);
 }
 
@@ -44,25 +44,8 @@ $.ajax({
   dataType: 'json',
   success: function(response) {
     dataset = response;
-    console.log(dataset);
   }
 });
-
-
-
-
-// var dataset = [
-//   {datetime: parseDatetime("2016:04:25:14:36:22"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:23"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:24"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:25"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:26"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:27"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:28"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:29"), sound: Math.random()},
-//   {datetime: parseDatetime("2016:04:25:14:36:30"), sound: Math.random()}
-// ];
-// console.log(dataset);
 
 
 // var dataset;
