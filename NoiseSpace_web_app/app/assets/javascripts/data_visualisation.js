@@ -35,19 +35,36 @@ function draw(dataset) {
 }
 
 parseDatetime = d3.time.format("%Y:%m:%d:%H:%M:%S").parse;
-var dataset = [
-  {datetime: parseDatetime("2016:04:25:14:36:22"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:23"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:24"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:25"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:26"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:27"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:28"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:29"), sound: Math.random()},
-  {datetime: parseDatetime("2016:04:25:14:36:30"), sound: Math.random()}
-];
 
-console.log(dataset);
+var dataset;
+
+$.ajax({
+  type: 'GET',
+  url: 'measurements/data.json',
+  dataType: 'json',
+  success: function(response) {
+    dataset = response;
+    console.log(dataset);
+  }
+});
+
+
+
+
+// var dataset = [
+//   {datetime: parseDatetime("2016:04:25:14:36:22"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:23"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:24"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:25"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:26"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:27"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:28"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:29"), sound: Math.random()},
+//   {datetime: parseDatetime("2016:04:25:14:36:30"), sound: Math.random()}
+// ];
+// console.log(dataset);
+
+
 // var dataset;
 // d3.csv("assets/data/data.csv", function(data) {
 //   dataset = data.map(function(d) {return {datetime: parseDatetime(d.datetime), sound: +d["sound"]}});
