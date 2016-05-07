@@ -17,8 +17,7 @@ ActiveRecord::Schema.define(version: 20160505233015) do
   enable_extension "plpgsql"
 
   create_table "measurements", force: :cascade do |t|
-    t.time     "time"
-    t.date     "date"
+    t.datetime "datetime"
     t.float    "dB"
     t.datetime "created_at"
     t.datetime "updated_at"

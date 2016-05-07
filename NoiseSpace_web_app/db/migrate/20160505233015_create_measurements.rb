@@ -1,8 +1,7 @@
 class CreateMeasurements < ActiveRecord::Migration
   def change
     create_table :measurements do |t|
-      t.time :time
-      t.date :date
+      t.datetime :datetime
       t.float :dB
 
       t.timestamps

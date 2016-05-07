@@ -4840,3 +4840,382 @@ Started GET "/assets/data_visualisation.self-55601a9d9cee8e882d7f432ce731237c724
 
 
 Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-07 14:02:37 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMeasurements (20160505233015)
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35m (75.1ms)[0m  DROP TABLE "measurements"
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20160505233015"]]
+  [1m[35m (39.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMeasurements (20160505233015)
+  [1m[35m (0.4ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/sammyd/Projects/project3/NoiseSpace/NoiseSpace_web_app/db/migrate/20160505233015_create_measurements.rb:7)
+  [1m[36m (58.7ms)[0m  [1mCREATE TABLE "measurements" ("id" serial primary key, "datetime" timestamp, "dB" float, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160505233015"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (8.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'measurements'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMeasurement Load (3.9ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMeasurement Load (1.0ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMeasurement Load (1.4ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.513760"], ["updated_at", "2016-05-07 05:09:26.513760"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.555683"], ["updated_at", "2016-05-07 05:09:26.555683"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.560343"], ["updated_at", "2016-05-07 05:09:26.560343"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.564515"], ["updated_at", "2016-05-07 05:09:26.564515"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.569960"], ["updated_at", "2016-05-07 05:09:26.569960"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.573487"], ["updated_at", "2016-05-07 05:09:26.573487"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.576955"], ["updated_at", "2016-05-07 05:09:26.576955"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.580457"], ["updated_at", "2016-05-07 05:09:26.580457"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.584210"], ["updated_at", "2016-05-07 05:09:26.584210"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.588247"], ["updated_at", "2016-05-07 05:09:26.588247"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.591672"], ["updated_at", "2016-05-07 05:09:26.591672"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.596119"], ["updated_at", "2016-05-07 05:09:26.596119"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.602245"], ["updated_at", "2016-05-07 05:09:26.602245"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.605629"], ["updated_at", "2016-05-07 05:09:26.605629"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.609391"], ["updated_at", "2016-05-07 05:09:26.609391"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.613047"], ["updated_at", "2016-05-07 05:09:26.613047"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.616769"], ["updated_at", "2016-05-07 05:09:26.616769"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.621884"], ["updated_at", "2016-05-07 05:09:26.621884"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.625329"], ["updated_at", "2016-05-07 05:09:26.625329"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.629409"], ["updated_at", "2016-05-07 05:09:26.629409"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.635704"], ["updated_at", "2016-05-07 05:09:26.635704"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.638847"], ["updated_at", "2016-05-07 05:09:26.638847"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.642143"], ["updated_at", "2016-05-07 05:09:26.642143"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.646041"], ["updated_at", "2016-05-07 05:09:26.646041"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.649967"], ["updated_at", "2016-05-07 05:09:26.649967"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.653584"], ["updated_at", "2016-05-07 05:09:26.653584"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.657853"], ["updated_at", "2016-05-07 05:09:26.657853"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.661067"], ["updated_at", "2016-05-07 05:09:26.661067"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.665086"], ["updated_at", "2016-05-07 05:09:26.665086"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.668716"], ["updated_at", "2016-05-07 05:09:26.668716"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.672536"], ["updated_at", "2016-05-07 05:09:26.672536"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.675983"], ["updated_at", "2016-05-07 05:09:26.675983"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.679584"], ["updated_at", "2016-05-07 05:09:26.679584"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.685868"], ["updated_at", "2016-05-07 05:09:26.685868"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.689024"], ["updated_at", "2016-05-07 05:09:26.689024"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.692706"], ["updated_at", "2016-05-07 05:09:26.692706"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.695889"], ["updated_at", "2016-05-07 05:09:26.695889"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.700290"], ["updated_at", "2016-05-07 05:09:26.700290"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.704110"], ["updated_at", "2016-05-07 05:09:26.704110"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.707842"], ["updated_at", "2016-05-07 05:09:26.707842"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.711732"], ["updated_at", "2016-05-07 05:09:26.711732"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.717439"], ["updated_at", "2016-05-07 05:09:26.717439"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.721496"], ["updated_at", "2016-05-07 05:09:26.721496"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2016-05-07 05:09:26.725517"], ["updated_at", "2016-05-07 05:09:26.725517"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2016-05-07 05:09:26.729092"], ["updated_at", "2016-05-07 05:09:26.729092"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mMeasurement Load (6.6ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[35mMeasurement Load (1.0ms)[0m  SELECT "measurements".* FROM "measurements"
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 3]]
+  [1m[36m (13.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 5]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 7]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 9]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 11]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 13]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 15]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 17]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 19]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 21]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 23]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 25]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 27]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 29]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 31]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 33]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 35]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 37]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 39]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 41]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 42]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 43]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "measurements" WHERE "measurements"."id" = $1[0m  [["id", 44]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 45]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mMeasurement Load (0.8ms)[0m  SELECT "measurements".* FROM "measurements"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMeasurement Load (1.0ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMeasurement Load (1.1ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:36:22.000000"], ["dB", 0.155], ["created_at", "2016-05-07 05:28:53.495347"], ["updated_at", "2016-05-07 05:28:53.495347"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mMeasurement Load (0.7ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMeasurement Load (0.9ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mMeasurement Load (0.8ms)[0m  SELECT "measurements".* FROM "measurements"
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "measurements" WHERE "measurements"."id" = $1  [["id", 46]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:36:22.000000"], ["dB", 0.155], ["created_at", "2016-05-07 05:31:35.943859"], ["updated_at", "2016-05-07 05:31:35.943859"]]
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:36:28.000000"], ["dB", 0.226132813], ["created_at", "2016-05-07 05:31:35.955000"], ["updated_at", "2016-05-07 05:31:35.955000"]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:36:33.000000"], ["dB", 0.23], ["created_at", "2016-05-07 05:31:35.968993"], ["updated_at", "2016-05-07 05:31:35.968993"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:36:38.000000"], ["dB", 0.256757813], ["created_at", "2016-05-07 05:31:35.973787"], ["updated_at", "2016-05-07 05:31:35.973787"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:36:43.000000"], ["dB", 0.201601563], ["created_at", "2016-05-07 05:31:35.978222"], ["updated_at", "2016-05-07 05:31:35.978222"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:36:48.000000"], ["dB", 0.2428125], ["created_at", "2016-05-07 05:31:35.981899"], ["updated_at", "2016-05-07 05:31:35.981899"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:36:54.000000"], ["dB", 0.220039063], ["created_at", "2016-05-07 05:31:35.984356"], ["updated_at", "2016-05-07 05:31:35.984356"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:36:59.000000"], ["dB", 0.236132813], ["created_at", "2016-05-07 05:31:35.987561"], ["updated_at", "2016-05-07 05:31:35.987561"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:37:04.000000"], ["dB", 0.200351563], ["created_at", "2016-05-07 05:31:35.990399"], ["updated_at", "2016-05-07 05:31:35.990399"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:37:09.000000"], ["dB", 0.233398438], ["created_at", "2016-05-07 05:31:35.993145"], ["updated_at", "2016-05-07 05:31:35.993145"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:37:15.000000"], ["dB", 0.256875], ["created_at", "2016-05-07 05:31:35.997008"], ["updated_at", "2016-05-07 05:31:35.997008"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:37:20.000000"], ["dB", 0.224648438], ["created_at", "2016-05-07 05:31:36.000276"], ["updated_at", "2016-05-07 05:31:36.000276"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:37:25.000000"], ["dB", 0.223046875], ["created_at", "2016-05-07 05:31:36.004077"], ["updated_at", "2016-05-07 05:31:36.004077"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:37:30.000000"], ["dB", 0.232539063], ["created_at", "2016-05-07 05:31:36.007674"], ["updated_at", "2016-05-07 05:31:36.007674"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:37:35.000000"], ["dB", 0.260273438], ["created_at", "2016-05-07 05:31:36.010870"], ["updated_at", "2016-05-07 05:31:36.010870"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["datetime", "2016-04-25 14:37:41.000000"], ["dB", 0.242265625], ["created_at", "2016-05-07 05:31:36.014066"], ["updated_at", "2016-05-07 05:31:36.014066"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "measurements" ("datetime", "dB", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["datetime", "2016-04-25 14:37:46.000000"], ["dB", 0.236601563], ["created_at", "2016-05-07 05:31:36.017529"], ["updated_at", "2016-05-07 05:31:36.017529"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mMeasurement Load (1.1ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[36mMeasurement Load (1.7ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+  [1m[35mMeasurement Load (1.1ms)[0m  SELECT  "measurements".* FROM "measurements" WHERE "measurements"."id" = $1 LIMIT 1  [["id", 51]]
