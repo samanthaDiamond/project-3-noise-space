@@ -199,11 +199,12 @@ function y_pos(day) {
   return pos;
 }
 
-var margin = 50;
-var width = 1000;
-var height = 500;
 
 function drawHourlyData(hourlyData) {
+  var margin = 50;
+  var width = 1000;
+  var height = 500;
+  
   d3.select(".bubble_chart")
     .append("svg")
       .attr("width", width)

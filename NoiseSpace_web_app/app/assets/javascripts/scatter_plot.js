@@ -18,7 +18,7 @@ function draw(dataset) {
     .enter()
     .append("circle");
 
-$("svg").css({top: 400, left: 200, position:'absolute'});
+  $("svg").css({top: 400, left: 200, position:'absolute'});
 
   var x_extent = [minX, maxX];
   // var x_extent = d3.extent(dataset, function(d){
@@ -72,6 +72,7 @@ $("svg").css({top: 400, left: 200, position:'absolute'});
       .attr("transform", "rotate (-90, -43, 0) translate(-280)");
 
 }
+
 
 function shiftgraph(direction) {
   if (direction === "right") {
