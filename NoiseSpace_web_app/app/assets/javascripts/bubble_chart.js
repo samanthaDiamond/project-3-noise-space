@@ -203,14 +203,6 @@ var margin = 50;
 var width = 1000;
 var height = 500;
 
-// var margin = {top: 60, right: 0, bottom: 70, left: 40},
-//
-//         genWidth = 1024;
-//         genHeight = 768;
-//
-//         width = genWidth - 70 - margin.left - margin.right,
-//         height = genHeight - 100 - margin.top - margin.bottom;
-
 function drawHourlyData(hourlyData) {
   d3.select(".bubble_chart")
     .append("svg")

@@ -24,13 +24,15 @@ function fadeOutWhitenoiseFadeInHeading() {
 }
 
 function fadeInHeading() {
-  $('body').append('<h1 class="NoiseSpace-title">NoiseSpace.</h1>').fadeIn(3000).delay(3000).fadeOut(3000, function() {
+  var NoiseSpaceHeading = $('<h1 class="NoiseSpace-title">NoiseSpace.</h1>').fadeIn(3000);
+  $('body').append(NoiseSpaceHeading).delay(4000).fadeOut(3000, function() {
     healthInfo();
   });
 }
 
 function healthInfo() {
-  var healthInfoContent = "Noise pollution can damage your health.\n Stress.\n Annoyance.\n High blood pressure.\n Cardiovascular disease.\n Hearing impairment.\n Sleep disturbance.\n These effects are triggered by long-term daily exposure to noise levels above 65 dB or with acute exposure above 80 to 85 dB as reported by the World Health Organisation (WHO).\n 85 dB is roughly equivalent to heavy traffic on a busy road.\n Is noise impacting your health?";
-  $('body').append('<div class="health-info">'+healthInfoContent+'</div>');
+  var healthMessage = "Noise pollution can damage your health.\n Stress.\n Annoyance.\n High blood pressure.\n Cardiovascular disease.\n Hearing impairment.\n Sleep disturbance.\n These effects are triggered by long-term daily exposure to noise levels above 65 dB or with acute exposure above 80 to 85 dB as reported by the World Health Organisation (WHO).\n 85 dB is roughly equivalent to heavy traffic on a busy road.\n Is noise impacting your health?";
+  var healthInfoContent = $('<div class="health-info">'+healthMessage+'</div>').fadeIn(3000);
+  $('body').append(healthInfoContent).delay(4000).fadeOut(3000);
   // $('.health-info').append('<p>Noise pollution can damage your health.\n Stress.\n Annoyance.\n High blood pressure.\n Cardiovascular disease.\n Hearing impairment.\n Sleep disturbance.\n These effects are triggered by long-term daily exposure to noise levels above 65 dB or with acute exposure above 80 to 85 dB as reported by the World Health Organisation (WHO).\n 85 dB is roughly equivalent to heavy traffic on a busy road.\n Is noise impacting your health?</p>');
 }
