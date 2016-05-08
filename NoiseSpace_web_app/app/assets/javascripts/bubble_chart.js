@@ -201,10 +201,18 @@ function y_pos(day) {
 
 var margin = 50;
 var width = 1000;
-var height = 450;
+var height = 500;
+
+// var margin = {top: 60, right: 0, bottom: 70, left: 40},
+//
+//         genWidth = 1024;
+//         genHeight = 768;
+//
+//         width = genWidth - 70 - margin.left - margin.right,
+//         height = genHeight - 100 - margin.top - margin.bottom;
 
 function drawHourlyData(hourlyData) {
-  d3.select("body")
+  d3.select(".bubble_chart")
     .append("svg")
       .attr("width", width)
       .attr("height", height)
@@ -212,6 +220,8 @@ function drawHourlyData(hourlyData) {
     .data(hourlyData)
     .enter()
     .append("circle");
+
+  $("svg").css({top: 50, left: 200, position:'absolute'});
 
   var x_extent = [-1, 24];
 
@@ -228,7 +238,19 @@ function drawHourlyData(hourlyData) {
   d3.selectAll("circle")
     .attr("cx", function(d){return x_scale(d.time);})
     .attr("cy", function(d){return y_scale(y_pos(d.day));})
-    .attr("r", function(d){return d.noise * 10;});
+    .attr("r", function(d){return d.noise * 10;})
+    .style("fill", function(d) {
+       var returnColor;
+       if (y_pos(d.day) === 0) { returnColor = "green";
+     } else if (y_pos(d.day) === 1) {
+         returnColor = "purple";
+       } else if (y_pos(d.day) === 2) {
+         returnColor = "red";
+       } else {
+         returnColor = "hotpink";
+       }
+       return returnColor;
+    });
 
   var x_axis = d3.svg.axis().scale(x_scale);
 
@@ -249,14 +271,14 @@ function drawHourlyData(hourlyData) {
   d3.select(".x.axis")
     .append("text")
       .attr("class", "axis_label")
-    .text("datetime")
+    .text("Time")
       .attr("x", (width / 2) - margin)
       .attr("y", margin / 1.5);
 
   d3.select(".y.axis")
     .append("text")
       .attr("class", "axis_label")
-    .text("noise(dB)")
+    .text("Day")
       .attr("transform", "rotate (-90, -43, 0) translate(-280)");
 
 }

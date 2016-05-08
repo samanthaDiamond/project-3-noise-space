@@ -6,10 +6,10 @@ var graphTimeWidth = 12*1000*60*60; // 12 hours in milliseconds
 
 var margin = 50;
 var width = 1000;
-var height = 450;
+var height = 500;
 
 function draw(dataset) {
-  d3.select("body")
+  d3.select(".scatter_plot")
     .append("svg")
       .attr("width", width)
       .attr("height", height)
@@ -17,6 +17,8 @@ function draw(dataset) {
     .data(dataset)
     .enter()
     .append("circle");
+
+$("svg").css({top: 400, left: 200, position:'absolute'});
 
   var x_extent = [minX, maxX];
   // var x_extent = d3.extent(dataset, function(d){
@@ -59,14 +61,14 @@ function draw(dataset) {
   d3.select(".x.axis")
     .append("text")
       .attr("class", "axis_label")
-    .text("datetime")
+    .text("Datetime")
       .attr("x", (width / 2) - margin)
       .attr("y", margin / 1.5);
 
   d3.select(".y.axis")
     .append("text")
       .attr("class", "axis_label")
-    .text("noise(dB)")
+    .text("Noise(dB)")
       .attr("transform", "rotate (-90, -43, 0) translate(-280)");
 
 }

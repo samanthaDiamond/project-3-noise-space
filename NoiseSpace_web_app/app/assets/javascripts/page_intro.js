@@ -26,3 +26,11 @@
 // function fadeInHeading() {
 //   $('body').append('<h1 class="NoiseSpace-title">NoiseSpace.</h1>');
 // }
+
+
+// noise pollution health impact:
+// hearing impairment, hypertension, ischemic heart disease, stress, annoyance, and sleep disturbance.
+// noise exposure increases stress levels leading to physiological arousal, such as raised heart rate and blood pressure.
+
+
+// 85 dB is roughly equivalent to the noise of heavy truck traffic on a busy road
