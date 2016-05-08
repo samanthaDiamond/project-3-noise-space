@@ -1,5 +1,5 @@
 // The IP address of your Tessel. Find it with `tessel wifi -l` and set it here
-var ipAddress = '192.168.0.8'
+var ipAddress = '192.168.0.8';
 
 var ws = require('nodejs-websocket');
 var port = 8000;
@@ -34,7 +34,7 @@ function getDateTime() {
     day = (day < 10 ? "0" : "") + day;
 
     return year + ":" + month + ":" + day + ":" + hour + ":" + min + ":" + sec;
-};
+}
 
 var addMeasurementToCSV = function (noise) {
   fs.appendFile(filename, getDateTime()+","+noise+"\n", function (err) {
@@ -54,10 +54,10 @@ var connection = ws.connect('ws://' + ipAddress + ':' + port, function() {
     noSample += 1;
     if (noSample%1000 === 0) {
       console.log(noSample,getDateTime());
-    };
+    }
   });
   connection.on('close', function() {
-    db.close()
+    db.close();
   });
 
 });
