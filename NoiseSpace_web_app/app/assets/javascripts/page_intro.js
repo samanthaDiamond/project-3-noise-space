@@ -25,15 +25,20 @@ function fadeOutWhitenoiseFadeInHeading() {
   });
 }
 
-// TODO: fix fadeIn noisespace and health info
+// TODO: fix fadeIn functionality
 
 function fadeInHeading() {
-  $('.NoiseSpace-title').append('NoiseSpace.').fadeIn(1000).delay(1000).fadeOut(1000, function() {
+  $('.NoiseSpace-title').append('NoiseSpace.').fadeOut(0).fadeIn(4000).delay(1000).fadeOut(4000, function() {
     healthInfo();
   });
 }
 
 function healthInfo() {
-  var healthMessage = "Noise pollution can damage your health. Stress.Annoyance High blood pressure. Cardiovascular disease. Hearing impairment. Sleep disturbance. These effects are triggered by long-term daily exposure to noise levels above 65 dB or with acute exposure above 80 to 85 dB as reported by the World Health Organisation (WHO).\n 85 dB is roughly equivalent to heavy traffic on a busy road.\n Is noise impacting your health?";
-  $('.health-info').append(healthMessage).delay(1000).fadeIn(1000).fadeOut(1000);
+  var healthMessage = "Noise pollution can damage your health.<br>Stress.<br>Annoyance.<br> High blood pressure.<br>Cardiovascular disease.<br>Hearing impairment.<br>Sleep disturbance.<br>These effects are triggered by long-term<br>daily exposureto noise levels above 65 dB<br>or with acute exposure above 80 to 85 dB<br>as reported by the World Health Organisation (WHO).<br> 85 dB is roughly equivalent to heavy traffic on a busy road.<br> Is noise impacting your health?";
+  $('.health-info').append(healthMessage).fadeOut(0).fadeIn(4000).delay(12000).fadeOut(4000, function () {
+    $('.data-visualisation-container').fadeIn(1000, function () {
+      drawHourlyData(hourlyData);
+      draw(dataset);
+    });
+  });
 }
