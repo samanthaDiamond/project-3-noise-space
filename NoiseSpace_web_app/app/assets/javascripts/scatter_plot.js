@@ -67,12 +67,12 @@ function draw(dataset) {
   //     .attr("transform", "translate(" + margin + ", 0 )")
   //   .call(y_axis);
 
-  d3.select(".scatter_plot .x.axis")
-    .append("text")
-      .attr("class", "axis_label")
-    .text("Datetime")
-      .attr("x", (width / 2) - margin)
-      .attr("y", margin / 1.5);
+  // d3.select(".scatter_plot .x.axis")
+  //   .append("text")
+  //     .attr("class", "axis_label")
+  //   .text("Datetime")
+  //     .attr("x", (width / 2) - margin)
+  //     .attr("y", margin / 1.5);
 
   d3.select(".scatter_plot .y.axis")
     .append("text")
