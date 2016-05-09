@@ -37,35 +37,35 @@ function draw(dataset) {
     .range([height-margin, margin])
     .domain(y_extent);
 
-  d3.selectAll("circle")
+  d3.selectAll(".scatter_plot circle")
     .attr("cx", function(d){return x_scale(d.datetime);})
     .attr("cy", function(d){return y_scale(d.dB);})
     .attr("r", 4);
 
   var x_axis = d3.svg.axis().scale(x_scale);
 
-  d3.select("svg")
+  d3.select(".scatter_plot svg")
     .append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + (height-margin) + ")")
     .call(x_axis);
 
-  var y_axis = d3.svg.axis().scale(y_scale).orient("left");
+  // var y_axis = d3.svg.axis().scale(y_scale).orient("left");
+  //
+  // d3.select(".scatter_plot svg")
+  //   .append("g")
+  //     .attr("class", "y axis")
+  //     .attr("transform", "translate(" + margin + ", 0 )")
+  //   .call(y_axis);
 
-  d3.select("svg")
-    .append("g")
-      .attr("class", "y axis")
-      .attr("transform", "translate(" + margin + ", 0 )")
-    .call(y_axis);
-
-  d3.select(".x.axis")
+  d3.select(".scatter_plot .x.axis")
     .append("text")
       .attr("class", "axis_label")
     .text("Datetime")
       .attr("x", (width / 2) - margin)
       .attr("y", margin / 1.5);
 
-  d3.select(".y.axis")
+  d3.select(".scatter_plot .y.axis")
     .append("text")
       .attr("class", "axis_label")
     .text("Noise(dB)")
@@ -96,14 +96,14 @@ function shiftgraph(direction) {
     .range([height-margin, margin])
     .domain(y_extent);
 
-  d3.selectAll("circle")
+  d3.selectAll(".scatter_plot circle")
     .attr("cx", function(d){return x_scale(d.datetime);})
     .attr("cy", function(d){return y_scale(d.dB);})
     .attr("r", 4);
 
   var x_axis = d3.svg.axis().scale(x_scale);
 
-  d3.select('svg').selectAll("g.x.axis")
+  d3.select('.scatter_plot svg').selectAll("g.x.axis")
         .call(x_axis);
 
 }

@@ -228,7 +228,7 @@ function drawHourlyData(hourlyData) {
     .range([height-margin, margin])
     .domain(y_extent);
 
-  d3.selectAll("circle")
+  d3.selectAll(".bubble_chart circle")
     .attr("cx", function(d){return x_scale(d.time);})
     .attr("cy", function(d){return y_scale(y_pos(d.day));})
     .attr("r", function(d){return d.noise * 10;})
@@ -247,7 +247,7 @@ function drawHourlyData(hourlyData) {
 
   var x_axis = d3.svg.axis().scale(x_scale);
 
-  d3.select("svg")
+  d3.select(".bubble_chart svg")
     .append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + (height-margin) + ")")
@@ -255,20 +255,20 @@ function drawHourlyData(hourlyData) {
 
   var y_axis = d3.svg.axis().scale(y_scale).orient("left");
 
-  d3.select("svg")
+  d3.select(".bubble_chart svg")
     .append("g")
       .attr("class", "y axis")
       .attr("transform", "translate(" + margin + ", 0 )")
     .call(y_axis);
 
-  d3.select(".x.axis")
+  d3.select(".bubble_chart .x.axis")
     .append("text")
       .attr("class", "axis_label")
     .text("Time")
       .attr("x", (width / 2) - margin)
       .attr("y", margin / 1.5);
 
-  d3.select(".y.axis")
+  d3.select(".bubble_chart .y.axis")
     .append("text")
       .attr("class", "axis_label")
     .text("Day")
