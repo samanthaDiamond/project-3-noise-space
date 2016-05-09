@@ -227,7 +227,7 @@ function drawHourlyData(hourlyData) {
 
   var x_extent = [-1, 23];
 
-  var x_scale = d3.scale.linear()
+  var x_scale = d3.time.scale()
     .range([margin,width-margin])
     .domain(x_extent);
 
@@ -254,7 +254,10 @@ function drawHourlyData(hourlyData) {
        return returnColor;
     });
 
-  var x_axis = d3.svg.axis().scale(x_scale);
+  var x_axis = d3.svg.axis()
+    .scale(x_scale)
+    .orient("bottom")
+    .tickFormat(d3.time.format("%H"));
 
   d3.select(".bubble_chart svg")
     .append("g")
