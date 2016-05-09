@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/measurements/data' => 'measurements#fetch_measurement_data'
 
+  get '/audios/whitenoise' => 'audios#whitenoise'
+
   # get '/pages/DIY' => 'pages#....'
 
 end
