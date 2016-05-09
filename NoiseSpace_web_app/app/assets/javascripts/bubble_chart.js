@@ -203,6 +203,7 @@ function drawHourlyData(hourlyData) {
   var margin = 80;
   var width = 1000;
   var height = 500;
+  var xTicks = ['12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', '9pm', '10pm', '11pm'];
 
   d3.select(".bubble_chart")
       .append("svg")
@@ -225,11 +226,23 @@ function drawHourlyData(hourlyData) {
       .style("fill", "white")
       .style("font-size", "24px");
 
-  var x_extent = [-1, 23];
+  var x_extent = [0, 24];
 
-  var x_scale = d3.time.scale()
+  var x_scale = d3.scale.ordinal()
     .range([margin,width-margin])
-    .domain(x_extent);
+    .domain(xTicks);
+
+    // var x_scale = d3.scale.linear()
+    //   .range([margin,width-margin])
+    //   .domain(x_extent);
+
+
+  // var timeFormat2 = d3.time.format('%Y-%m-%dT%H:%M:%S%Z');
+  // var x_scale = d3.time.scale.utc()
+  //   .domain([timeFormat2.parse('2014-03-08T12:00:00+0000'), timeFormat2.parse('2014-03-10T00:00:00+0000')])
+  //   .range([margin,width-margin]);
+
+
 
   var y_extent = [0,7];
 
@@ -238,7 +251,7 @@ function drawHourlyData(hourlyData) {
     .domain(y_extent);
 
   d3.selectAll(".bubble_chart circle")
-    .attr("cx", function(d){return x_scale(d.time);})
+    .attr("cx", function(d){return x_scale(d.time+1);})
     .attr("cy", function(d){return y_scale(y_pos(d.day));})
     .attr("r", function(d){return d.noise * 10;})
     .style("fill", function(d) {
@@ -254,10 +267,9 @@ function drawHourlyData(hourlyData) {
        return returnColor;
     });
 
-  var x_axis = d3.svg.axis()
-    .scale(x_scale)
-    .orient("bottom")
-    .tickFormat(d3.time.format("%H"));
+
+
+  var x_axis = d3.svg.axis().scale(x_scale).ticks(24).tickValues(xTicks);
 
   d3.select(".bubble_chart svg")
     .append("g")
@@ -273,14 +285,14 @@ function drawHourlyData(hourlyData) {
       .attr("transform", "translate(" + margin + ", 0 )")
     .call(y_axis);
 
-  // d3.select(".bubble_chart .x.axis")
-  //   .append("text")
-  //     .attr("class", "axis_label")
-  //   .text("Time")
-  //     .attr("x", (width / 2) - margin)
-  //     .attr("y", margin / 1.5)
-  //     .style("fill", "white")
-  //     .style("font-size", "16px");
+  d3.select(".bubble_chart .x.axis")
+    .append("text")
+      .attr("class", "axis_label")
+    .text("Time")
+      .attr("x", (width / 2) - margin)
+      .attr("y", margin / 1.5)
+      .style("fill", "white")
+      .style("font-size", "16px");
 
   // d3.select(".bubble_chart .y.axis")
   //   .append("text")

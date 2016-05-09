@@ -43,12 +43,19 @@ function welcomeInfo() {
 function healthInfo() {
   var healthMessage = "To make things worse noise pollution can damage your health. <br>Long-term noise exposure or acute exposure to high noise<br>levels, such as heavy traffic on a busy road, can induce: <br><br>Stress. Annoyance. High blood pressure. Cardiovascular disease.<br> Hearing impairment. Sleep disturbance.";
   $('.health-info').append('<p health-message>'+ healthMessage +'</p>').fadeOut(0).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+    noiseExperience();
+  });
+}
+
+function noiseExperience() {
+  var noiseExperienceMessage = "I live on a somewhat busy road and the noise irritates me at times. <br>I often wonder what times of the day and days of the week are noisiest. <br>Or is the noise constant? I decided to find out...";
+  $('.noise-experience').append('<p noise-experience-message>'+ noiseExperienceMessage +'</p>').fadeOut(0).fadeIn(1000).delay(1000).fadeOut(1000, function () {
     noiseDataMessage();
   });
 }
 
 function noiseDataMessage() {
-  var noiseDataMessage = "I live on a somewhat busy road and the noise irritates me at times. <br>I often wonder what times of the day and days of the week are noisiest. <br>Or is the noise constant? I decided to find out. <br><br>I monitored te noise levels in my street for 10 days using a Tessel2<br>microcontroller. You are about to see a representation of the data <br>from my experiment along with a step-by-step guide for replicating<br>this experiment so you can give it a go yourself.<br>";
+  var noiseDataMessage = "I monitored the noise levels in my street for 10 days using a Tessel2<br>microcontroller. You are about to see a representation of the data <br>from my experiment along with a step-by-step guide for replicating<br>this experiment so you can give it a go yourself.<br>";
   $('.noise-data-info').append('<p noise-data-message>'+ noiseDataMessage +'</p>').fadeOut(0).fadeIn(1000).delay(1000).fadeOut(1000, function () {
     $('.data-visualisation-container').fadeOut(0).fadeIn(1000, function () {
       drawHourlyData(hourlyData);
