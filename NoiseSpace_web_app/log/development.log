@@ -20590,3 +20590,1558 @@ Started GET "/measurements/data.json" for ::1 at 2016-05-09 08:15:15 +1000
 Processing by MeasurementsController#fetch_measurement_data as JSON
   [1m[36mMeasurement Load (12.5ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
 Completed 200 OK in 809ms (Views: 794.7ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:21:12 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1163ms (Views: 1161.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/scatter_plot.self-0d45da5a8a6bf70ac534c35237520e8e550b08306a0f088d9ce3d0c587cb00b8.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:21:14 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:21:15 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (40.9ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 1644ms (Views: 1599.9ms | ActiveRecord: 40.9ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:21:22 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 101ms (Views: 100.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/scatter_plot.self-0d45da5a8a6bf70ac534c35237520e8e550b08306a0f088d9ce3d0c587cb00b8.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:21:23 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:21:23 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (12.8ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 560ms (Views: 546.4ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:21:42 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 240ms (Views: 236.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:42 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:42 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/scatter_plot.self-0d45da5a8a6bf70ac534c35237520e8e550b08306a0f088d9ce3d0c587cb00b8.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:21:43 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:21:43 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (12.7ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 778ms (Views: 764.5ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:21:58 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:58 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:58 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:58 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:21:58 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:21:58 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:58 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:21:58 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/scatter_plot.self-0d45da5a8a6bf70ac534c35237520e8e550b08306a0f088d9ce3d0c587cb00b8.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:21:59 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:21:59 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (16.1ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 744ms (Views: 723.5ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:26:13 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Invalid CSS after "... this - app css": expected "{", was ""):
+    2: <html>
+    3: <head>
+    4:   <title>NoiseSpace</title>
+    5:   <%= stylesheet_link_tag 'application', media: 'all' %>
+    6:   <%= javascript_include_tag 'application' %>
+    7:   <%= csrf_meta_tags %>
+    8:   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  app/assets/stylesheets/main.scss:7
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__586920913523669000_70228662373600'
+
+
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (26.4ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.7ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (145.0ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (157.1ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/sammyd/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (325.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:26:22 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 179ms (Views: 178.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/assets/scatter_plot.self-0d45da5a8a6bf70ac534c35237520e8e550b08306a0f088d9ce3d0c587cb00b8.js?body=1" for ::1 at 2016-05-09 09:26:23 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:26:23 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (12.9ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 715ms (Views: 701.0ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:27:44 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 172ms (Views: 170.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/scatter_plot.self-0d45da5a8a6bf70ac534c35237520e8e550b08306a0f088d9ce3d0c587cb00b8.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:27:44 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:27:44 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (13.0ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 867ms (Views: 851.6ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:29:14 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 687ms (Views: 684.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:29:15 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:29:15 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:29:15 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:29:15 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:29:15 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:29:15 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:29:15 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/scatter_plot.self-f0c616024c288fc14a189f2a1ba674bde13741439a12f12212c386a5a8fffc8e.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:29:16 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:29:16 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (19.0ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 1214ms (Views: 1193.4ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:33:20 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 448ms (Views: 445.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/bubble_chart.self-cf66e522f3182976b805e70298128b83b13cf5dd30c17326a8ec43d86e5a5e4e.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/page_intro.self-6573d32e01adc9481effd6a4d3b4cc37fc5d2b64a875b8f7e373da9031eaada9.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/main.self-36661f204d93477560dad765028048f4590d776a9051def8a4d7bd6f9027f97b.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/assets/scatter_plot.self-f0c616024c288fc14a189f2a1ba674bde13741439a12f12212c386a5a8fffc8e.js?body=1" for ::1 at 2016-05-09 09:33:20 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:33:21 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (27.8ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 732ms (Views: 703.7ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:36:35 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 483ms (Views: 478.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/main.self-36661f204d93477560dad765028048f4590d776a9051def8a4d7bd6f9027f97b.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/scatter_plot.self-61ca76fac355ae5e7ad1e61bd00b4743b6af0d01b73945785a7ccd88eafc51c4.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/assets/page_intro.self-6573d32e01adc9481effd6a4d3b4cc37fc5d2b64a875b8f7e373da9031eaada9.js?body=1" for ::1 at 2016-05-09 09:36:36 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:36:36 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (27.7ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 744ms (Views: 709.8ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:37:15 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 435ms (Views: 432.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/bubble_chart.self-6bb9fb4574c78ca9bf9296624a123b33bb5201dfb83944b7d697f056286902cf.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/scatter_plot.self-23952ef552d5a11f70ab937117d05762c05dc88fe2a908a11b340b7fd90b07e2.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/main.self-36661f204d93477560dad765028048f4590d776a9051def8a4d7bd6f9027f97b.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/page_intro.self-6573d32e01adc9481effd6a4d3b4cc37fc5d2b64a875b8f7e373da9031eaada9.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:37:16 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:37:16 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (26.4ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 694ms (Views: 666.2ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:41:16 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 443ms (Views: 440.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/scatter_plot.self-61ca76fac355ae5e7ad1e61bd00b4743b6af0d01b73945785a7ccd88eafc51c4.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:41:17 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:41:17 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (18.0ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 928ms (Views: 908.8ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:42:09 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 190ms (Views: 188.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:42:09 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/scatter_plot.self-61ca76fac355ae5e7ad1e61bd00b4743b6af0d01b73945785a7ccd88eafc51c4.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:42:10 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:42:10 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (32.2ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 1379ms (Views: 1341.8ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:43:52 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 482ms (Views: 480.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:43:52 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:43:52 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:43:52 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:43:52 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:43:52 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/page_intro.self-5b793f03f73ccffc6f5c3bc27f4e2a630cc6b4052899ef660a1bc0ec0e9f3b0b.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/scatter_plot.self-61ca76fac355ae5e7ad1e61bd00b4743b6af0d01b73945785a7ccd88eafc51c4.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:43:53 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:43:53 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (12.5ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 925ms (Views: 911.1ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:46:07 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 477ms (Views: 475.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/page_intro.self-73bcb42a5759b1616bb78ca97a0b665a8baecd88d31d73bfe4f5538c049e4b82.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/scatter_plot.self-61ca76fac355ae5e7ad1e61bd00b4743b6af0d01b73945785a7ccd88eafc51c4.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:46:08 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:46:08 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (21.3ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 1031ms (Views: 1007.8ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 09:51:57 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 452ms (Views: 450.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/page_intro.self-1e5db6af9ce80a5aeccb615788dc6aef53d02a7ee46fb7f1d51a976c56e995bd.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/scatter_plot.self-61ca76fac355ae5e7ad1e61bd00b4743b6af0d01b73945785a7ccd88eafc51c4.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 09:51:57 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 09:51:58 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (32.2ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 852ms (Views: 818.8ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:47:56 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 1061ms (Views: 1056.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/page_intro.self-10354515e0d319dc5028f6212f83ef09cc31a3211c5c61136cedc0919d41fe83.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:47:59 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:47:59 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (57.8ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 880ms (Views: 819.6ms | ActiveRecord: 57.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:48:00 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:48:01 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (26.0ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 797ms (Views: 770.0ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:49:05 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 568ms (Views: 565.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:49:05 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/page_intro.self-c42ced4dce0fa5994ecefa65e8b3cc272d7eeedb818705bc49457f4eee83dc07.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:49:06 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:49:06 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (18.8ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 920ms (Views: 896.6ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:50:32 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 471ms (Views: 466.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/page_intro.self-71b4eb1ab80eb8a126d3e2a135344e77b47d9893fd94bc6138534b88842000ed.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:50:33 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:50:34 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (22.8ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 1334ms (Views: 1309.0ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:52:01 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 372ms (Views: 369.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/page_intro.self-a4a4a6d1410f4eb6edcdd0031dfa0b7a9faf21172bbfc929d1db4257362f3c50.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:52:02 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:52:02 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (14.0ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 661ms (Views: 646.7ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:53:08 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 513ms (Views: 508.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:53:08 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:53:08 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:53:08 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:53:08 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:53:08 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:53:08 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/page_intro.self-f92adac3301b6c25e7056bc3b1984b13b1ee1267cf5c66c37ec67702138b9e74.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:53:09 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:53:09 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (20.7ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 781ms (Views: 759.9ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:56:24 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 676ms (Views: 672.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/page_intro.self-fa9ec7d3684483600afdd612bd5413fce5c62a1fad4d6b77f4b257310cc65c1d.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:56:25 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:56:25 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (37.2ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 1144ms (Views: 1103.9ms | ActiveRecord: 37.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:56:57 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 500ms (Views: 498.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/main.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/page_intro.self-83e70e6b50aeb0e827cc9f617fc4537d6d17d37af1d7bc13f0347fc864c62f2d.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:56:58 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:56:58 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (14.2ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 1171ms (Views: 1155.3ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 10:59:05 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 651ms (Views: 649.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_pages.self-d1da26c3613aa4ecf06de645a10973087939a048602534a4891ffa2099e9aa2d.css?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/page_intro.self-8b324053251e587a083819f6b5861b4c1ea6cc2494493ab005e79b9e1e1a6f88.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 10:59:06 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 10:59:06 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[36mMeasurement Load (15.7ms)[0m  [1mSELECT "measurements".* FROM "measurements"[0m
+Completed 200 OK in 830ms (Views: 812.8ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/" for ::1 at 2016-05-09 11:00:09 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 651ms (Views: 649.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/_pages.self-90185b2178973eecfacd2e0c9cf78fa91b00d3fa8e59f2e0e0b94cd78754d159.css?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/_buttons.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/_data_visualisaton.self-a88b874d6dab3d6359cab08807604183f1cdeab7bfb629ec4a0650fb132d2a7e.css?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/_variable.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/_topography.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/DIY.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/bubble_chart.self-5f777a968d885493a42675497a9e319c0546ce2b4b58183612221511a827a2d6.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/d3.self-850dec129b5f20c85fb8f10f3afae50c6efdfc9981c2952916d4a850bf18afee.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/d3.min.self-92f02a8bb72a02f94dee66fd7ec0f1479cfe5ca1e190698fb63619067051ec30.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/main.self-7868daaae33f69e1e8be793ad227cba7164eee861414be372139254c032235b9.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/scatter_plot.self-2d68e11d6880ab873ba169871ef29d31a7d8d483f06bb1a662e4e98e208b9943.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/page_intro.self-8b324053251e587a083819f6b5861b4c1ea6cc2494493ab005e79b9e1e1a6f88.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/assets/application.self-32c1c67c52714d5eb1c4f1fb663248c0f37cb3542c6dac3932a687fbba2b597d.js?body=1" for ::1 at 2016-05-09 11:00:10 +1000
+
+
+Started GET "/measurements/data.json" for ::1 at 2016-05-09 11:00:11 +1000
+Processing by MeasurementsController#fetch_measurement_data as JSON
+  [1m[35mMeasurement Load (17.2ms)[0m  SELECT "measurements".* FROM "measurements"
+Completed 200 OK in 643ms (Views: 624.6ms | ActiveRecord: 17.2ms)

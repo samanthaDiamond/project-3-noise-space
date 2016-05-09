@@ -204,7 +204,7 @@ function drawHourlyData(hourlyData) {
   var margin = 50;
   var width = 1000;
   var height = 500;
-  
+
   d3.select(".bubble_chart")
     .append("svg")
       .attr("width", width)
@@ -214,7 +214,7 @@ function drawHourlyData(hourlyData) {
     .enter()
     .append("circle");
 
-  $("svg").css({top: 50, left: 200, position:'absolute'});
+  $(".bubble_chart svg").css({top: 50, left: 200, position:'absolute'});
 
   var x_extent = [-1, 24];
 

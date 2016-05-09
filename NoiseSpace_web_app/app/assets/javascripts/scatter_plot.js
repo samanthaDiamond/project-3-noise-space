@@ -18,7 +18,7 @@ function draw(dataset) {
     .enter()
     .append("circle");
 
-  $("svg").css({top: 400, left: 200, position:'absolute'});
+  $(".scatter_plot svg").css({top: 400, left: 200, position:'absolute'});
 
   var x_extent = [minX, maxX];
   // var x_extent = d3.extent(dataset, function(d){
@@ -50,13 +50,13 @@ function draw(dataset) {
       .attr("transform", "translate(0," + (height-margin) + ")")
     .call(x_axis);
 
-  // var y_axis = d3.svg.axis().scale(y_scale).orient("left");
-  //
-  // d3.select("svg")
-  //   .append("g")
-  //     .attr("class", "y axis")
-  //     .attr("transform", "translate(" + margin + ", 0 )")
-  //   .call(y_axis);
+  var y_axis = d3.svg.axis().scale(y_scale).orient("left");
+
+  d3.select("svg")
+    .append("g")
+      .attr("class", "y axis")
+      .attr("transform", "translate(" + margin + ", 0 )")
+    .call(y_axis);
 
   d3.select(".x.axis")
     .append("text")
@@ -72,7 +72,6 @@ function draw(dataset) {
       .attr("transform", "rotate (-90, -43, 0) translate(-280)");
 
 }
-
 
 function shiftgraph(direction) {
   if (direction === "right") {

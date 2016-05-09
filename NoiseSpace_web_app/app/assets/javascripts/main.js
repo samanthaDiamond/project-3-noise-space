@@ -1,4 +1,4 @@
-// window.onload = function() {
-//   refreshWhitenoise();
-//   fadeOutWhitenoiseFadeInHeading();
-// };
+window.onload = function() {
+  refreshWhitenoise();
+  fadeOutWhitenoiseFadeInHeading();
+};

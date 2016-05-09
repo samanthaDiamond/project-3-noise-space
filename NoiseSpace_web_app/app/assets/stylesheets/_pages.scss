@@ -22,35 +22,3 @@ canvas {
 .health-info {
   color: white;
 }
-
-// data visualisation
-
-// circle plot points
-circle {
-  stroke: black;
-  stroke-width: 0.5px;
-  fill: hotpink;
-  opacity: 0.6;
-};
-
-// axis
-
-.axis path {
-  fill:none;
-  stroke: white;
-}
-
-.axis {
-  font-size: 8pt;
-  font-family: sans-serif;
-  color: white;
-}
-
-.tick {
-  fill: none;
-  stroke: white;
-}
-
-.axis_label {
-  color: white;
-}
