@@ -18,7 +18,7 @@ function drawCells() {
   }
 
 function fadeOutWhitenoiseFadeInHeading() {
-  $("#canvasCells").delay(1000).fadeOut(1000, function() {
+  $("#canvasCells").delay(4000).fadeOut(4000, function() {
     clearInterval(drawCellsInterval);
     $("#canvasCells").remove();
     fadeInHeading();
@@ -29,14 +29,28 @@ function fadeOutWhitenoiseFadeInHeading() {
 
 function fadeInHeading() {
   $('.NoiseSpace-title').append('NoiseSpace.').fadeOut(0).fadeIn(4000).delay(1000).fadeOut(4000, function() {
+    welcomeInfo();
+  });
+}
+
+function welcomeInfo() {
+  var welcomeMessage = "<span>Welcome to NoiseSpace</span>. <br><br>NoiseSpace is about raising awareness of noise pollution.<br>Do you ever feel like noise has robbed you of your privacy? <br>Do you crave an escape to nature to hear nothing but the wind and wildlife? <br>If you’re thinking yes, I hear you!!";
+  $('.welcome-info').append('<p welcome-message>'+ welcomeMessage +'</p>').fadeOut(0).fadeIn(4000).delay(4000).fadeOut(4000, function () {
     healthInfo();
   });
 }
 
 function healthInfo() {
-  var healthMessage = "Noise pollution can damage your health.<br>Stress.<br>Annoyance.<br> High blood pressure.<br>Cardiovascular disease.<br>Hearing impairment.<br>Sleep disturbance.<br>These effects are triggered by long-term<br>daily exposureto noise levels above 65 dB<br>or with acute exposure above 80 to 85 dB<br>as reported by the World Health Organisation (WHO).<br> 85 dB is roughly equivalent to heavy traffic on a busy road.<br> Is noise impacting your health?";
-  $('.health-info').append(healthMessage).fadeOut(0).fadeIn(4000).delay(12000).fadeOut(4000, function () {
-    $('.data-visualisation-container').fadeIn(1000, function () {
+  var healthMessage = "And to make things worse noise pollution can damage your health. <br>Long-term noise exposure or acute exposure to high noise<br>levels, such as heavy traffic on a busy road, can induce: <br><br>Stress. Annoyance. High blood pressure. Cardiovascular disease.<br> Hearing impairment. Sleep disturbance.";
+  $('.health-info').append('<p health-message>'+ healthMessage +'</p>').fadeOut(0).fadeIn(4000).delay(4000).fadeOut(4000, function () {
+    noiseDataMessage();
+  });
+}
+
+function noiseDataMessage() {
+  var noiseDataMessage = "...";
+  $('.noise-data-info').append('<p noise-data-message>'+ noiseDataMessage +'</p>').fadeOut(0).fadeIn(4000).delay(4000).fadeOut(4000, function () {
+    $('.data-visualisation-container').fadeOut(0).fadeIn(4000, function () {
       drawHourlyData(hourlyData);
       draw(dataset);
     });

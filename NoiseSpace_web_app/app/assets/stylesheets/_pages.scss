@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  background: black;
+  background: #1C2124;
 }
 
 canvas {
@@ -17,12 +17,22 @@ canvas {
   font-size: 120px;
   text-align: center;
   margin-top: 2em;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 1.5px;
 }
 
-.health-info {
-  color: white;
-  font-size: 24px;
+.welcome-info, .health-info, .noise-data-info {
+  color: #DDDDDD;
+  font-size: 22px;
   text-align: center;
-  margin-top: 2em;
-  line-height: 150%;
+  margin-top: 100px;;
+  line-height: 160%;
+  font-family: 'Titillium Web', sans-serif;
+  // text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  span {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
 }

@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require d3
+//= howler.js
+//= audio.js
 //= page_intro.js
 //= data_visualisation.js
 //= main.js

@@ -12,7 +12,7 @@ circle {
 
 .axis {
   font-size: 8pt;
-  font-family: sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   color: white;
 }
 
@@ -26,5 +26,11 @@ svg.axis_label {
 }
 
 .bubble-chart-title {
-  font-family: sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.scatter-plot-title {
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 1.5px;
 }
