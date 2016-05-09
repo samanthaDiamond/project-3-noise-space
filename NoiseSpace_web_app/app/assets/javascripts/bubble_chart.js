@@ -199,14 +199,13 @@ function y_pos(day) {
   return pos;
 }
 
-
 function drawHourlyData(hourlyData) {
-  var margin = 50;
+  var margin = 80;
   var width = 1000;
   var height = 500;
 
   d3.select(".bubble_chart")
-    .append("svg")
+      .append("svg")
       .attr("width", width)
       .attr("height", height)
     .selectAll("circle")
@@ -214,15 +213,25 @@ function drawHourlyData(hourlyData) {
     .enter()
     .append("circle");
 
+
   $(".bubble_chart svg").css({top: 50, left: 200, position:'absolute'});
 
-  var x_extent = [-1, 24];
+    d3.select(".bubble_chart svg")
+    .append("text")
+      .attr("class","bubble-chart-title")
+    .text("Average Hourly Noise Measurements Per Day")
+      .attr("x", width / 3 - margin)
+      .attr("y", margin/ 1.5)
+      .style("fill", "white")
+      .style("font-size", "24px");
+
+  var x_extent = [-1, 23];
 
   var x_scale = d3.scale.linear()
     .range([margin,width-margin])
     .domain(x_extent);
 
-  var y_extent = [0,8];
+  var y_extent = [0,7];
 
   var y_scale = d3.scale.linear()
     .range([height-margin, margin])
@@ -261,17 +270,20 @@ function drawHourlyData(hourlyData) {
       .attr("transform", "translate(" + margin + ", 0 )")
     .call(y_axis);
 
-  d3.select(".bubble_chart .x.axis")
-    .append("text")
-      .attr("class", "axis_label")
-    .text("Time")
-      .attr("x", (width / 2) - margin)
-      .attr("y", margin / 1.5);
+  // d3.select(".bubble_chart .x.axis")
+  //   .append("text")
+  //     .attr("class", "axis_label")
+  //   .text("Time")
+  //     .attr("x", (width / 2) - margin)
+  //     .attr("y", margin / 1.5)
+  //     .style("fill", "white")
+  //     .style("font-size", "16px");
 
-  d3.select(".bubble_chart .y.axis")
-    .append("text")
-      .attr("class", "axis_label")
-    .text("Day")
-      .attr("transform", "rotate (-90, -43, 0) translate(-280)");
-
+  // d3.select(".bubble_chart .y.axis")
+  //   .append("text")
+  //     .attr("class", "axis_label")
+  //   .text("Day")
+  //     .attr("transform", "rotate (-90, -43, 0) translate(-280)")
+  //     .style("fill", "white")
+  //     .style("font-size", "16px");
 }

@@ -18,7 +18,7 @@ function drawCells() {
   }
 
 function fadeOutWhitenoiseFadeInHeading() {
-  $("#canvasCells").delay(3000).fadeOut(5000, function() {
+  $("#canvasCells").delay(1000).fadeOut(1000, function() {
     clearInterval(drawCellsInterval);
     $("#canvasCells").remove();
     fadeInHeading();
@@ -28,12 +28,12 @@ function fadeOutWhitenoiseFadeInHeading() {
 // TODO: fix fadeIn noisespace and health info
 
 function fadeInHeading() {
-  $('.NoiseSpace-title').append('NoiseSpace.').fadeIn(3000).delay(4000).fadeOut(3000, function() {
+  $('.NoiseSpace-title').append('NoiseSpace.').fadeIn(1000).delay(1000).fadeOut(1000, function() {
     healthInfo();
   });
 }
 
 function healthInfo() {
   var healthMessage = "Noise pollution can damage your health. Stress.Annoyance High blood pressure. Cardiovascular disease. Hearing impairment. Sleep disturbance. These effects are triggered by long-term daily exposure to noise levels above 65 dB or with acute exposure above 80 to 85 dB as reported by the World Health Organisation (WHO).\n 85 dB is roughly equivalent to heavy traffic on a busy road.\n Is noise impacting your health?";
-  $('.health-info').append(healthMessage).delay(8000).fadeIn(3000).fadeOut(3000);
+  $('.health-info').append(healthMessage).delay(1000).fadeIn(1000).fadeOut(1000);
 }

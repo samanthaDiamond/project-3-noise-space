@@ -20,6 +20,15 @@ function draw(dataset) {
 
   $(".scatter_plot svg").css({top: 400, left: 200, position:'absolute'});
 
+  d3.select(".scatter_plot svg")
+  .append("text")
+    .attr("class","scatter-plot-title")
+  .text("Noise Measurements")
+    .attr("x", width / 2 - margin)
+    .attr("y", margin/ 1.5)
+    .style("fill", "white")
+    .style("font-size", "24px");
+
   var x_extent = [minX, maxX];
   // var x_extent = d3.extent(dataset, function(d){
   //   return d.datetime;
@@ -70,7 +79,6 @@ function draw(dataset) {
       .attr("class", "axis_label")
     .text("Noise(dB)")
       .attr("transform", "rotate (-90, -43, 0) translate(-280)");
-
 }
 
 function shiftgraph(direction) {
@@ -105,7 +113,6 @@ function shiftgraph(direction) {
 
   d3.select('.scatter_plot svg').selectAll("g.x.axis")
         .call(x_axis);
-
 }
 
 $.ajax({

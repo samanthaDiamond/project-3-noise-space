@@ -21,6 +21,10 @@ circle {
   stroke: white;
 }
 
-.axis_label {
+svg.axis_label {
   color: white;
+}
+
+.bubble-chart-title {
+  font-family: sans-serif;
 }
