@@ -13,4 +13,12 @@ class MeasurementsController < ApplicationController
     # add data to measurements database
     # update average of all hourly average measurements
   end
+
+  def fetch_average_measurement_data
+    @hourly_averages = Hourly_Average.all
+
+    respond_to do |format|
+      format.json {render json: @hourly_averages}
+    end
+  end
 end

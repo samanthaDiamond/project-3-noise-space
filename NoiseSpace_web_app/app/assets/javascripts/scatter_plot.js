@@ -141,30 +141,9 @@ $.ajax({
       return {datetime: parseDatetime(d.datetime), dB: +d["dB"]}
     });
 
-    // bubble chart min and max values
-    // var arrOfTimeValues = [];
-    // var timeValues = function(hourlyData) {
-    //   for (var i = 0; i < hourlyData.length; i++) {
-    //     var time = hourlyData[i].time;
-    //     arrOfTimeValues.push(time);
-    //   }
-    //   return arrOfTimeValues;
-    // };
-    //
-    //
-    // var minXBubbleChart = Math.min.apply( Math, timeValues(hourlyData));
-    // var maxXBubbleChart = Math.max.apply( Math, timeValues(hourlyData));
-    // // maxXbubbleChart.setTime(minX.getTime()+graphTimeWidth);
-
     minX = dataset[0].datetime;
     maxX = dataset[1].datetime;
     // console.log( minX, maxX );
     maxX.setTime(minX.getTime()+graphTimeWidth);
   }
 });
-
-
-// var dataset;
-// d3.csv("assets/data/data.csv", function(data) {
-//   dataset = data.map(function(d) {return {datetime: parseDatetime(d.datetime), sound: +d["sound"]}});
-// });

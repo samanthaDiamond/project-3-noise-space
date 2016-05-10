@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505233015) do
+ActiveRecord::Schema.define(version: 20160510210939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hourly_averages", force: :cascade do |t|
+    t.string   "day"
+    t.integer  "time"
+    t.float    "noise"
+    t.integer  "num_measurements"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "measurements", force: :cascade do |t|
     t.datetime "datetime"

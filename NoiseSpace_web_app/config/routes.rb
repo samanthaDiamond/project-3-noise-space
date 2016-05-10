@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/measurements/data' => 'measurements#fetch_measurement_data'
 
-  get '/audios/whitenoise' => 'audios#whitenoise'
+  get '/measurements/avg_data' => 'measurements#fetch_average_measurement_data'
 
   # get '/pages/DIY' => 'pages#....'
 

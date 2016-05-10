@@ -62,10 +62,9 @@ function noiseDataMessage() {
   });
 }
 
-function fadeInDataVisPage() {
-  // $('.data-visualisation-container').append
-  // $('.nav-bar-items').append("<li class="NoiseSpace-logo">NoiseSpace.</li>").append("<li><script class="DIY-link" type="text/javascript" src="DIY.js">DIY</script></li>").fadeOut(0).fadeIn(4000)
-  $('.NoiseSpace-logo').append('NoiseSpace.');
-  $('.DIY-link').append('DIY');
-
-}
+// function fadeInDataVisPage() {
+//   $('.NoiseSpace-logo').append('NoiseSpace.').fadeOut(0).fadeIn(1000);
+//   $('.DIY-link').append('DIY').fadeOut(0).fadeIn(1000);
+//   drawHourlyData(hourlyData).fadeOut(0).fadeIn(1000);
+//   draw(dataset).fadeOut(0).fadeIn(1000);
+// }
