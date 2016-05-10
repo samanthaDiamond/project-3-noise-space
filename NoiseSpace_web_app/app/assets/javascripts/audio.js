@@ -1,6 +1,4 @@
 // var sound = new Howl({
-//   urls: ['/audios/whitenoise'],
+//   urls: ['/assets/whitenoise.mp3'],
 //   loop: true,
 // }).play();
-//
-// sound();

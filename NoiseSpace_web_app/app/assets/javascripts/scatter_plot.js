@@ -4,11 +4,11 @@ var minX;
 var maxX;
 var graphTimeWidth = 12*1000*60*60; // 12 hours in milliseconds
 
-var margin = 50;
-var width = 1000;
-var height = 500;
-
 function draw(dataset) {
+  var margin = 50;
+  var width = 1000;
+  var height = 500;
+
   d3.select(".scatter_plot")
     .append("svg")
       .attr("width", width)
@@ -51,7 +51,7 @@ function draw(dataset) {
     .attr("cy", function(d){return y_scale(d.dB);})
     .attr("r", 4);
 
-  var x_axis = d3.svg.axis().scale(x_scale);
+  var x_axis = d3.svg.axis().scale(x_scale); //.tickFormat(d3.time.format("%I %p"));
 
   d3.select(".scatter_plot svg")
     .append("g")
@@ -96,6 +96,8 @@ function shiftgraph(direction) {
     .range([margin,width-margin])
     .domain(x_extent);
 
+  console.log(x_scale);
+
   var y_extent = d3.extent(dataset, function(d){
     return d.dB;
   });
@@ -112,7 +114,7 @@ function shiftgraph(direction) {
   var x_axis = d3.svg.axis().scale(x_scale);
 
   d3.select('.scatter_plot svg').selectAll("g.x.axis")
-        .call(x_axis);
+    .call(x_axis);
 }
 
 $.ajax({
