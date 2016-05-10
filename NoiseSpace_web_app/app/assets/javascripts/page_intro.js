@@ -61,3 +61,11 @@ function noiseDataMessage() {
     });
   });
 }
+
+function fadeInDataVisPage() {
+  // $('.data-visualisation-container').append
+  // $('.nav-bar-items').append("<li class="NoiseSpace-logo">NoiseSpace.</li>").append("<li><script class="DIY-link" type="text/javascript" src="DIY.js">DIY</script></li>").fadeOut(0).fadeIn(4000)
+  $('.NoiseSpace-logo').append('NoiseSpace.');
+  $('.DIY-link').append('DIY');
+
+}
