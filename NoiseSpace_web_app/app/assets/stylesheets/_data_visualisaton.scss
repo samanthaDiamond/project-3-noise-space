@@ -1,7 +1,7 @@
 circle {
   stroke: black;
   stroke-width: 0.5px;
-  fill: hotpink;
+  fill: #27E8C0;
   opacity: 0.6;
 };
 
@@ -11,7 +11,8 @@ circle {
 }
 
 .axis {
-  font-size: 8pt;
+  font-size: 10pt;
+  letter-spacing: 1.5px;
   font-family: 'Titillium Web', sans-serif;
   color: white;
 }

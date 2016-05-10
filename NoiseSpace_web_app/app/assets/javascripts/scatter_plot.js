@@ -6,8 +6,8 @@ var graphTimeWidth = 12*1000*60*60; // 12 hours in milliseconds
 
 function draw(dataset) {
   var margin = 50;
-  var width = 1000;
-  var height = 500;
+  var width = 1050;
+  var height = 280;
 
   d3.select(".scatter_plot")
     .append("svg")
@@ -18,29 +18,35 @@ function draw(dataset) {
     .enter()
     .append("circle");
 
-  $(".scatter_plot svg").css({top: 400, left: 200, position:'absolute'});
+  $(".scatter_plot svg").css({top: 500, left: 200, position:'absolute'});
 
   d3.select(".scatter_plot svg")
   .append("text")
     .attr("class","scatter-plot-title")
-  .text("Noise Measurements")
-    .attr("x", width / 2 - margin)
+  .text("DAILY NOISE MEASUREMENTS")
+    .attr("x", width / 2.8)
     .attr("y", margin/ 1.5)
     .style("fill", "white")
     .style("font-size", "24px");
 
-  var x_extent = [minX, maxX];
-  // var x_extent = d3.extent(dataset, function(d){
-  //   return d.datetime;
-  // });
+  // var x_extent = [minX, maxX];
+  var x_extent = d3.extent(dataset, function(d){
+    return d.datetime;
+  });
 
   var x_scale = d3.time.scale()
-    .range([margin,width-margin])
+    .range([0 - margin, width-margin])
     .domain(x_extent);
 
-  var y_extent = d3.extent(dataset, function(d){
-    return d.dB;
-  });
+    // var x_scale = d3.scale.linear()
+    //   .range([0, 10])
+    //   .domain(x_extent);
+
+  // var y_extent = d3.extent(dataset, function(d){
+  //   return d.dB;
+  // });
+
+  var y_extent = [0.15, 0.3];
 
   var y_scale = d3.scale.linear()
     .range([height-margin, margin])
@@ -53,14 +59,20 @@ function draw(dataset) {
 
   var x_axis = d3.svg.axis().scale(x_scale); //.tickFormat(d3.time.format("%I %p"));
 
+  // var x_axis = d3.svg.axis().scale(x).orient("bottom")
+  //     .tickFormat(function(d) {
+  //       var f = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10"];
+  //         return (f[d]);
+  // });
+
   d3.select(".scatter_plot svg")
     .append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + (height-margin) + ")")
     .call(x_axis);
 
-  // var y_axis = d3.svg.axis().scale(y_scale).orient("left");
-  //
+  var y_axis = d3.svg.axis().scale(y_scale).orient("left");
+
   // d3.select(".scatter_plot svg")
   //   .append("g")
   //     .attr("class", "y axis")
@@ -81,41 +93,43 @@ function draw(dataset) {
       .attr("transform", "rotate (-90, -43, 0) translate(-280)");
 }
 
-function shiftgraph(direction) {
-  if (direction === "right") {
-    minX.setTime(minX.getTime()+200000);
-    maxX.setTime(maxX.getTime()+200000);
-  } else {
-    minX.setTime(minX.getTime()-200000);
-    maxX.setTime(maxX.getTime()-200000);
-  }
+// Scroll function
 
-  var x_extent = [minX, maxX];
-
-  var x_scale = d3.time.scale()
-    .range([margin,width-margin])
-    .domain(x_extent);
-
-  console.log(x_scale);
-
-  var y_extent = d3.extent(dataset, function(d){
-    return d.dB;
-  });
-
-  var y_scale = d3.scale.linear()
-    .range([height-margin, margin])
-    .domain(y_extent);
-
-  d3.selectAll(".scatter_plot circle")
-    .attr("cx", function(d){return x_scale(d.datetime);})
-    .attr("cy", function(d){return y_scale(d.dB);})
-    .attr("r", 4);
-
-  var x_axis = d3.svg.axis().scale(x_scale);
-
-  d3.select('.scatter_plot svg').selectAll("g.x.axis")
-    .call(x_axis);
-}
+// function shiftgraph(direction) {
+//   if (direction === "right") {
+//     minX.setTime(minX.getTime()+200000);
+//     maxX.setTime(maxX.getTime()+200000);
+//   } else {
+//     minX.setTime(minX.getTime()-200000);
+//     maxX.setTime(maxX.getTime()-200000);
+//   }
+//
+//   var x_extent = [minX, maxX];
+//
+//   var x_scale = d3.time.scale()
+//     .range([margin,width-margin])
+//     .domain(x_extent);
+//
+//   console.log(x_scale);
+//
+//   var y_extent = d3.extent(dataset, function(d){
+//     return d.dB;
+//   });
+//
+//   var y_scale = d3.scale.linear()
+//     .range([height-margin, margin])
+//     .domain(y_extent);
+//
+//   d3.selectAll(".scatter_plot circle")
+//     .attr("cx", function(d){return x_scale(d.datetime);})
+//     .attr("cy", function(d){return y_scale(d.dB);})
+//     .attr("r", 4);
+//
+//   var x_axis = d3.svg.axis().scale(x_scale);
+//
+//   d3.select('.scatter_plot svg').selectAll("g.x.axis")
+//     .call(x_axis);
+// }
 
 $.ajax({
   type: 'GET',
