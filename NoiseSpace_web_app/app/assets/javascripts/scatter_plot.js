@@ -8,6 +8,8 @@ function draw(dataset) {
   var margin = 50;
   var width = 1050;
   var height = 280;
+  var left_pad = 20;
+  var right_pad = 20;
 
   d3.select(".scatter_plot")
     .append("svg")
@@ -18,24 +20,28 @@ function draw(dataset) {
     .enter()
     .append("circle");
 
-  $(".scatter_plot svg").css({top: 500, left: 200, position:'absolute'});
+  $(".scatter_plot svg").css({top: 500, left: 200, position: "absolute"});
 
   d3.select(".scatter_plot svg")
   .append("text")
     .attr("class","scatter-plot-title")
   .text("DAILY NOISE MEASUREMENTS")
-    .attr("x", width / 2.8)
+    .attr("x", width / 3.2)
     .attr("y", margin/ 1.5)
     .style("fill", "white")
     .style("font-size", "24px");
 
+    parseDatetime = d3.time.format("%Y-%m-%d %H:%M:%S").parse;
+
   // var x_extent = [minX, maxX];
-  var x_extent = d3.extent(dataset, function(d){
-    return d.datetime;
-  });
+  // var x_extent = d3.extent(dataset, function(d){
+  //   return d.datetime;
+  // });
+
+  var x_extent = [parseDatetime("2016-04-27 00:00:00"), parseDatetime("2016-05-06 23:59:59")];
 
   var x_scale = d3.time.scale()
-    .range([0 - margin, width-margin])
+    .range([0 + left_pad, width])
     .domain(x_extent);
 
     // var x_scale = d3.scale.linear()
@@ -57,13 +63,7 @@ function draw(dataset) {
     .attr("cy", function(d){return y_scale(d.dB);})
     .attr("r", 4);
 
-  var x_axis = d3.svg.axis().scale(x_scale); //.tickFormat(d3.time.format("%I %p"));
-
-  // var x_axis = d3.svg.axis().scale(x).orient("bottom")
-  //     .tickFormat(function(d) {
-  //       var f = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10"];
-  //         return (f[d]);
-  // });
+  var x_axis = d3.svg.axis().scale(x_scale).tickFormat(d3.time.format("%a"));
 
   d3.select(".scatter_plot svg")
     .append("g")
@@ -142,23 +142,23 @@ $.ajax({
     });
 
     // bubble chart min and max values
-    var arrOfTimeValues = [];
-    var timeValues = function(hourlyData) {
-      for (var i = 0; i < hourlyData.length; i++) {
-        var time = hourlyData[i].time;
-        arrOfTimeValues.push(time);
-      }
-      return arrOfTimeValues;
-    };
-
-
-    var minXBubbleChart = Math.min.apply( Math, timeValues(hourlyData));
-    var maxXBubbleChart = Math.max.apply( Math, timeValues(hourlyData));
-    // maxXbubbleChart.setTime(minX.getTime()+graphTimeWidth);
+    // var arrOfTimeValues = [];
+    // var timeValues = function(hourlyData) {
+    //   for (var i = 0; i < hourlyData.length; i++) {
+    //     var time = hourlyData[i].time;
+    //     arrOfTimeValues.push(time);
+    //   }
+    //   return arrOfTimeValues;
+    // };
+    //
+    //
+    // var minXBubbleChart = Math.min.apply( Math, timeValues(hourlyData));
+    // var maxXBubbleChart = Math.max.apply( Math, timeValues(hourlyData));
+    // // maxXbubbleChart.setTime(minX.getTime()+graphTimeWidth);
 
     minX = dataset[0].datetime;
     maxX = dataset[1].datetime;
-    console.log( minX, maxX );
+    // console.log( minX, maxX );
     maxX.setTime(minX.getTime()+graphTimeWidth);
   }
 });
