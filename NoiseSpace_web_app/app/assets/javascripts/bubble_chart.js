@@ -204,7 +204,8 @@ var drawHourlyData = function (hourlyData) {
 var w = 1000,
     h = 500,
     top_pad = 20,
-    left_pad = 100;
+    left_pad = 100,
+    margin = 50;
 
 var x = d3.scale.linear()
     .domain([-1, 23])
@@ -217,30 +218,45 @@ var y = d3.scale.linear()
 
 var svg = d3.select(".bubble_chart")
     .append("svg:svg")
-    .attr("width", w + left_pad)
-    .attr("height", h + top_pad);
+      .attr("width", w + left_pad)
+      .attr("height", h + top_pad);
 
-svg.selectAll("circle")
+svg.selectAll(".bubble_chart circle")
     .data(hourlyData)
     .enter().append("circle")
-    .attr("class", "dot")
-    .attr("cx", function (d) {
-    return x(d.time);
-})
+      .attr("class", "dot")
+      .attr("cx", function (d) {
+        return x(d.time);
+      })
 //Math.random for a crude jitter hack
-.attr("cy", function (d) {
-    return y(y_pos(d.day) + "");
-})
-.attr("r", function (d) {
-  return d.noise * 10;
-});
+      .attr("cy", function (d) {
+        return y(y_pos(d.day) + "");
+      })
+      .attr("r", function (d) {
+        return d.noise * 10;
+      });
+
+d3.selectAll(".bubble_chart circle")
+    .style("fill", function(d) {
+       var returnColor;
+       if (y_pos(d.day) === 0) { returnColor = "green";
+     } else if (y_pos(d.day) === 1) {
+         returnColor = "purple";
+       } else if (y_pos(d.day) === 2) {
+         returnColor = "red";
+       } else {
+         returnColor = "hotpink";
+       }
+       return returnColor;
+    });
 
 var xAxis = d3.svg.axis().scale(x).orient("bottom")
     .tickFormat(function(d) {
             var f = ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"];
     return (f[d]);
 }),
-    yAxis = d3.svg.axis().scale(y).orient("left");
+
+yAxis = d3.svg.axis().scale(y).orient("left");
 
 svg.append("g")
     .attr("class", "axis")
@@ -252,9 +268,35 @@ svg.append("g")
     .attr("transform", "translate(" + (left_pad) + ", 0)")
     .call(yAxis);
 
-    $(".bubble_chart svg").css({top: 50, left: 200, position:'absolute'});
+$(".bubble_chart svg").css({top: 50, left: 200, position:'absolute'});
 
-}
+d3.select(".bubble_chart svg")
+  .append("text")
+    .attr("class","bubble-chart-title")
+  .text("Average Hourly Noise Measurements Per Day")
+    .attr("x", w / 3 - top_pad)
+    .attr("y", margin / 1.5)
+    .style("fill", "white")
+    .style("font-size", "24px");
+
+d3.selectAll(".bubble_chart circle")
+  // .attr("cx", function(d){ return d.time * 40 + 30})
+  // .attr("cy", function(d){return y_scale(y_pos(d.day));})
+  // .attr("r", function(d){return d.noise * 10;})
+  .style("fill", function(d) {
+     var returnColor;
+     if (y_pos(d.day) === 0) { returnColor = "green";
+   } else if (y_pos(d.day) === 1) {
+       returnColor = "purple";
+     } else if (y_pos(d.day) === 2) {
+       returnColor = "red";
+     } else {
+       returnColor = "hotpink";
+     }
+     return returnColor;
+  });
+
+};
 
 
 
