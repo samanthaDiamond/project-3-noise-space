@@ -32,7 +32,7 @@ function y_pos(day) {
 
 var drawHourlyData = function (hourlyData) {
 
-  var w = 1000,
+  var w = 1300,
       h = 400,
       top_pad = 100,
       left_pad = 100,
@@ -40,16 +40,24 @@ var drawHourlyData = function (hourlyData) {
 
   var x = d3.scale.linear()
       .domain([-1, 23])
-      .range([left_pad, w - left_pad]);
+      .range([left_pad, w - left_pad * 4]);
 
   var y = d3.scale.linear()
       .domain([0, 7])
       .range([h - top_pad, top_pad]);
 
+  // var svg = d3.select(".bubble_chart")
+  //     .append("svg:svg")
+  //       .attr("width", w + left_pad)
+  //       .attr("height", h + top_pad);
+
   var svg = d3.select(".bubble_chart")
-      .append("svg:svg")
-        .attr("width", w + left_pad)
-        .attr("height", h + top_pad);
+    .append("div")
+    .classed("svg-container", true)
+    .append("svg:svg")
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox","0 0 " + w + " " + h)
+      .classed("svg-content-responsive", true);
 
   svg.selectAll(".bubble_chart circle")
       .data(hourlyData)
@@ -93,7 +101,7 @@ var drawHourlyData = function (hourlyData) {
     .append("text")
       .attr("class","bubble-chart-title")
     .text("AVERAGE HOURLY NOISE MEASUREMENTS PER DAY")
-      .attr("x", w / 4.5)
+      .attr("x", w / 6)
       .attr("y", margin / 1)
       .style("fill", "white")
       .style("font-size", "24px");

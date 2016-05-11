@@ -7,37 +7,42 @@ var graphTimeWidth = 12*1000*60*60; // 12 hours in milliseconds
 function draw(dataset) {
   var margin = 50;
   var width = 1050;
-  var height = 280;
+  var height = 250;
   var left_pad = 20;
   var right_pad = 20;
 
-  d3.select(".scatter_plot")
-    .append("svg")
-      .attr("width", width)
-      .attr("height", height)
-    .selectAll("circle")
-    .data(dataset)
-    .enter()
-    .append("circle");
+  // d3.select(".scatter_plot")
+  //   .append("svg")
+  //     .attr("width", width)
+  //     .attr("height", height)
+  //   .selectAll("circle")
+  //   .data(dataset)
+  //   .enter()
+  //   .append("circle");
 
-    d3.select(".scatter_plot")
-      .append("svg")
-        .attr("width", width)
-        .attr("height", height)
-      .selectAll("circle")
-      .data(dataset)
-      .enter()
-      .append("circle");
+d3.select(".scatter_plot")
+  .append("div")
+  .classed("svg-container", true)
+  .append("svg")
+  //responsive SVG needs these 2 attributes and no width and height attr
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox","0 0 " + width + " " + height)
+  //class to make it responsive
+  .classed("svg-content-responsive", true)
+  .selectAll("circle")
+  .data(dataset)
+  .enter()
+  .append("circle");
 
-        // d3.select("div#chartId")
-        //    .append("div")
-        //    .classed("svg-container", true) //container class to make it responsive
-        //    .append("svg")
-        //    //responsive SVG needs these 2 attributes and no width and height attr
-        //    .attr("preserveAspectRatio", "xMinYMin meet")
-        //    .attr("viewBox", "0 0 600 400")
-        //    //class to make it responsive
-        //    .classed("svg-content-responsive", true);
+// d3.select(".scatter_plot")
+//    .append("div")
+//    .classed("svg-container", true) //container class to make it responsive
+//    .append("svg")
+//    //responsive SVG needs these 2 attributes and no width and height attr
+//    .attr("preserveAspectRatio", "xMinYMin meet")
+//    .attr("viewBox","0 0 " + width + " " + height)
+//    //class to make it responsive
+//    .classed("svg-content-responsive", true);
 
   $(".scatter_plot svg").css({top: 500, left: 200, position: "absolute"});
 
@@ -45,7 +50,8 @@ function draw(dataset) {
   .append("text")
     .attr("class","scatter-plot-title")
   .text("DAILY NOISE MEASUREMENTS")
-    .attr("x", width / 3.2)
+    // .attr("x", width / 3.2)
+    .attr("x", width / 5)
     .attr("y", margin/ 1.5)
     .style("fill", "white")
     .style("font-size", "24px");
@@ -60,7 +66,7 @@ function draw(dataset) {
   var x_extent = [parseDatetime("2016-04-27 00:00:00"), parseDatetime("2016-05-06 23:59:59")];
 
   var x_scale = d3.time.scale()
-    .range([0 + left_pad, width])
+    .range([0 + left_pad, width / 1.4 ])
     .domain(x_extent);
 
     // var x_scale = d3.scale.linear()
