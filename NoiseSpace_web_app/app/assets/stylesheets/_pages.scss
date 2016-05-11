@@ -8,12 +8,17 @@
 
 body {
   background: #1C2124;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 canvas {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  margin: 0;
+  position: absolute;
+  top: 0;
 }
 
 .NoiseSpace-title {
@@ -46,13 +51,6 @@ nav {
   // border: 1px solid red;
 }
 
-nav>div.DIY-link {
-  display: inline-block;
-  // border: 1px solid green;
-  text-decoration: none;
-  color: white;
-}
-
 .NoiseSpace-logo {
   // border: 1px solid blue;
   display: inline-block;
@@ -71,6 +69,13 @@ nav>div.DIY-link {
   margin: 50px;
 }
 
+.DIY-link {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
 div.DIY-container {
   color: white;
   font-size: 18px;
@@ -79,6 +84,7 @@ div.DIY-container {
 
 .tessel2-pic {
   margin: 50px;
+  text-align: center
 }
 
 .tessel2-pic>img {
@@ -87,8 +93,6 @@ div.DIY-container {
   border-radius: 10%;
   width: 23em;
   height: 20em;
-  align-items: center;
-  margin: 0 auto;
 }
 
 .text-box {
@@ -98,4 +102,11 @@ div.DIY-container {
   background-color: white;
   padding: 15px;
   border-radius: 10%;
+}
+.fadeInNav {
+  display:none;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
