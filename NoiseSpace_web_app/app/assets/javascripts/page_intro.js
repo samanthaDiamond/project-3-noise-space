@@ -58,7 +58,7 @@ function noiseDataMessage() {
     // $('.data-visualisation-container').fadeOut(0).fadeIn(4000, function () {
       // fadeInDataVisPage();
       $('.NoiseSpace-logo').append('NoiseSpace.').fadeOut(0).fadeIn(4000);
-      $('.nav-bar-items').append('<li><%= link_to 'DIY', pages_DIY_path, :class => 'DIY-link' %></li>').fadeOut(0).fadeIn(4000);
+      $('.NoiseSpace-logo').append("<%= link_to "NoiseSpace.", root_path %>").fadeOut(0).fadeIn(4000);
       drawHourlyData(hourlyData); // .fadeOut(0).fadeIn(4000);
       draw(dataset); // .fadeOut(0).fadeIn(4000);
     });
