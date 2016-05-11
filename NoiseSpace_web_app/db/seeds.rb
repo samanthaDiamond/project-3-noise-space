@@ -15,17 +15,30 @@ csv.each do |row|
 end
 
 Hourly_Average.destroy_all
-days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 hours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
  # create empty hourly average bins 7x24
 days.each do |day|
   hours.each do |hour|
-    Hourly_Average.create(day: days, time: hours, noise: 0, num_measurements: 0)
+    Hourly_Average.create(day: day, time: hour, noise: 0, num_measurements: 0)
   end
 end
 
-# AllMeasurements = Measurement.all
-#
-# AllMeasurements.each do |m|
-#
-# end
+AllMeasurements = Measurement.all
+
+AllMeasurements.each do |m|
+  day = days[m.datetime.wday]
+  hour = m.datetime.hour
+  bin = Hourly_Average.find_by("day = ? AND time = ?", day, hour)
+  hourlyAvgNoise = Hourly_Average.all
+  bin.noise += m.dB
+  bin.num_measurements += 1
+  bin.save
+end
+
+bins = Hourly_Average.all
+
+bins.each do |b|
+  b.noise = b.noise / b.num_measurements
+  b.save
+end
