@@ -58,7 +58,7 @@ function noiseDataMessage() {
     // $('.data-visualisation-container').fadeOut(0).fadeIn(4000, function () {
       // fadeInDataVisPage();
       $('.NoiseSpace-logo').append('NoiseSpace.').fadeOut(0).fadeIn(4000);
-      // $('.nav-bar-items').append('<li><%= link_to 'DIY', pages_DIY_path, :class => 'DIY-link' %></li>').fadeOut(0).fadeIn(4000);
+      $('.nav-bar-items').append('<li><%= link_to 'DIY', pages_DIY_path, :class => 'DIY-link' %></li>').fadeOut(0).fadeIn(4000);
       drawHourlyData(hourlyData); // .fadeOut(0).fadeIn(4000);
       draw(dataset); // .fadeOut(0).fadeIn(4000);
     });
@@ -66,6 +66,6 @@ function noiseDataMessage() {
 }
 
 // function fadeInDataVisPage() {
-//   $('.NoiseSpace-logo').append('NoiseSpace.').fadeOut(0).fadeIn(4000);
+  // $('.NoiseSpace-logo').append('NoiseSpace.').fadeOut(0).fadeIn(4000);
 //   $('.DIY-link').append('DIY').fadeOut(0).fadeIn(4000);
 // }

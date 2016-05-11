@@ -1,0 +1,78 @@
+<h1 class="DIY-title">Measure Your Own Noise Data with the Tessel2</h1>
+
+<div class="tessel2-pic-container">
+  <div class="tessel2-pic"> <%= image_tag 'tessel2.jpg' %></div>
+</div>
+
+<div class="DIY-container">
+  <!-- <h2>Step 1</h2>
+  <p>Install Node.js.
+    * brew install node *
+  </p>
+  <h2>Step 2</h2>
+  <p>
+    Run * npm install -g tessel *
+  </p>
+  <h2>Step 3</h2>
+  <p>
+    Update Tessel's firmware by plugging the Tessel2 into your computer via USB.
+    Run * teseel update *
+    The lights should blink yellow and red.
+  </p>
+  <h2>Step 3</h2>
+  <p>
+    In your command line, make a directory for your Tessel code, change into the directory, and then initialize npm in that directory:
+    npm init -y
+    Now your ready to run code on your Tessel2!
+  </p>
+  <h2>Step 4</h2> -->
+
+  <h2>Step 1</h2>
+  <p>
+    Follow the "0. prereqs", "1. install", "2. wifi" and "3. blinky" guides on the Tessel website (http://tessel.github.io/t2-start/) to install and test your Tessel.
+  </p>
+
+  <h2>Step 2</h2>
+  <p>
+    Make a directory in your "tessel-code" directory called "ambient". Change into the "ambient" directory and initialize your tessel project
+    <div class="text-box">t2 init</div>
+  </p>
+
+  <h2>Step 3</h2>
+  <p>
+    Plug the ambient module into Tessel2 port A with the electrical components face up, then plug Tessel2 into your computer via USB.
+  </p>
+  <h2>Step 4</h2>
+  <p>
+    Run * npm install ambient-attx4 * in the command line to install Tessel2.
+  </p>
+  <h2>Step 5</h2>
+  <p>
+    Rename "index.js" to "ambient.js" and replace the file content with the following code. <span>Save</span>the file.
+
+    * var tessel = require('tessel');
+      var ambientlib = require('ambient-attx4');
+
+      var ambient = ambientlib.use(tessel.port['A']);
+
+      ambient.on('ready', function () {
+       // Get points of sound data.
+        setInterval( function () {
+            ambient.getSoundLevel( function(err, sounddata) {
+              if (err) throw err;
+              console.log("Sound Level:", sounddata.toFixed(8));
+            });
+          });
+        }, 500); // The readings will happen every .5 seconds
+      });
+
+      ambient.on('error', function (err) {
+        console.log(err);
+      }); *
+  </p>
+  <h2>Step 5</h2>
+  <p>
+    Run * t2 run ambient.js *
+Watch sound values appear in your terminal! Make some noise and watch the values increase.
+  </p>
+</div>

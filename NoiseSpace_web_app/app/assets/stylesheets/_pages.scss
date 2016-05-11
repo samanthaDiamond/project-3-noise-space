@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 body {
   background: #1C2124;
 }
@@ -17,7 +21,7 @@ canvas {
   font-size: 120px;
   text-align: center;
   margin-top: 2em;
-  font-family: 'Titillium Web', sans-serif;
+  // font-family: 'Titillium Web', sans-serif;
   letter-spacing: 1.5px;
 }
 
@@ -27,7 +31,7 @@ canvas {
   text-align: center;
   margin-top: 230px;
   line-height: 160%;
-  font-family: 'Titillium Web', sans-serif;
+  // font-family: 'Titillium Web', sans-serif;
   // text-transform: uppercase;
   letter-spacing: 1.5px;
 
@@ -52,8 +56,46 @@ nav>div.DIY-link {
 .NoiseSpace-logo {
   // border: 1px solid blue;
   display: inline-block;
-  font-family: 'Titillium Web', sans-serif;
+  // font-family: 'Titillium Web', sans-serif;
   color: white;
   font-size: 32px;
   text-decoration: none;
+}
+
+.DIY-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 1.8px;
+  text-align: center;
+  margin: 50px;
+}
+
+div.DIY-container {
+  color: white;
+  font-size: 18px;
+  margin: 50px;
+}
+
+.tessel2-pic {
+  margin: 50px;
+}
+
+.tessel2-pic>img {
+  // width: 25%;
+  // height: 20%;
+  border-radius: 10%;
+  width: 23em;
+  height: 20em;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.text-box {
+  height: 1.5em;
+  width: 3em;
+  color: black;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10%;
 }
