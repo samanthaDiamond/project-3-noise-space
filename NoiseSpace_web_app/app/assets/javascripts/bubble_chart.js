@@ -95,7 +95,7 @@ var drawHourlyData = function (hourlyData) {
       .attr("transform", "translate(" + (left_pad) + ", 0)")
       .call(yAxis);
 
-  $(".bubble_chart svg").css({top: 100, left: 200, position:'absolute'});
+  $(".bubble_chart svg").css({top: 0, left: 200, position:'absolute'});
 
   d3.select(".bubble_chart svg")
     .append("text")

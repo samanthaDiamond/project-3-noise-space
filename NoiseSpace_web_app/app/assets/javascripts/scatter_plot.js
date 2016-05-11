@@ -44,7 +44,7 @@ d3.select(".scatter_plot")
 //    //class to make it responsive
 //    .classed("svg-content-responsive", true);
 
-  $(".scatter_plot svg").css({top: 500, left: 200, position: "absolute"});
+  $(".scatter_plot svg").css({top: 0, left: 200, position: "absolute"});
 
   d3.select(".scatter_plot svg")
   .append("text")
