@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/pages/DIY' => 'pages#DIY'
 
+  get '/pages/data_visualisations' => 'pages#data_visualisations'
+
 end

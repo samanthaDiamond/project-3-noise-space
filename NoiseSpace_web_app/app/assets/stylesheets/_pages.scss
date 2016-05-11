@@ -48,13 +48,11 @@ canvas {
 
 nav {
   display: inline-block;
-  // border: 1px solid red;
+  margin-top: 10px;
 }
 
 .NoiseSpace-logo {
-  // border: 1px solid blue;
   display: inline-block;
-  // font-family: 'Titillium Web', sans-serif;
   color: white;
   font-size: 32px;
   text-decoration: none;
@@ -88,8 +86,6 @@ div.DIY-container {
 }
 
 .tessel2-pic>img {
-  // width: 25%;
-  // height: 20%;
   border-radius: 10%;
   width: 23em;
   height: 20em;
@@ -103,10 +99,21 @@ div.DIY-container {
   padding: 15px;
   border-radius: 10%;
 }
+
 .fadeInNav {
   display:none;
   a {
     text-decoration: none;
     color: white;
+    font-size: 32px;
+    letter-spacing: 1.5px;
+    margin: 20px 40px 20px 20px
   }
+}
+
+.fadeInNavDIYPage>a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1.5px;
+
 }
