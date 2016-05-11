@@ -131,11 +131,7 @@ $.ajax({
   url: 'measurements/avg_data.json',
   dataType: 'json',
   success: function(response) {
-    drawHourlyData(response);
-    // hourlyData = response.map(function(d) {
-    //   return {day: d.day, time: +d["time"], noise: +d["noise"]};
-    // });
-    // drawHourlyData(hourlyData);
+    hourlyData = response;
   }
 });
 

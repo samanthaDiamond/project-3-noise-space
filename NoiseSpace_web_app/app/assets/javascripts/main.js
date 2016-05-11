@@ -5,10 +5,6 @@ window.onload = function() {
 noiseDataMessage();
 };
 
-
-// audio
-
-// var sound = new Howl({
-//   urls: ['/assets/whitenoise.mp3'],
-//   // fade: (1.0, 0.0, 4000),
-// });
+var sound = new Howl({
+  urls: ['/assets/whitenoise.mp3'],
+});

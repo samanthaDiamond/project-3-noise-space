@@ -37,8 +37,23 @@ canvas {
   }
 }
 
+nav {
+  display: inline-block;
+  // border: 1px solid red;
+}
+
+nav>div.DIY-link {
+  display: inline-block;
+  // border: 1px solid green;
+  text-decoration: none;
+  color: white;
+}
+
 .NoiseSpace-logo {
+  // border: 1px solid blue;
+  display: inline-block;
   font-family: 'Titillium Web', sans-serif;
   color: white;
   font-size: 32px;
+  text-decoration: none;
 }
