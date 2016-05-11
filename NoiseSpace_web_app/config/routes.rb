@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   get '/measurements/avg_data' => 'measurements#fetch_average_measurement_data'
 
-  get '/pages/DIY' => 'pages#DIY'
-
-  get '/pages/data_visualisations' => 'pages#data_visualisations'
+  # get '/pages/DIY' => 'pages#DIY'
+  #
+  # get '/pages/data_visualisations' => 'pages#data_visualisations'
 
 end

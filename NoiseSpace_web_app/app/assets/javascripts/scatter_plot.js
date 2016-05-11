@@ -20,6 +20,25 @@ function draw(dataset) {
     .enter()
     .append("circle");
 
+    d3.select(".scatter_plot")
+      .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+      .selectAll("circle")
+      .data(dataset)
+      .enter()
+      .append("circle");
+
+        // d3.select("div#chartId")
+        //    .append("div")
+        //    .classed("svg-container", true) //container class to make it responsive
+        //    .append("svg")
+        //    //responsive SVG needs these 2 attributes and no width and height attr
+        //    .attr("preserveAspectRatio", "xMinYMin meet")
+        //    .attr("viewBox", "0 0 600 400")
+        //    //class to make it responsive
+        //    .classed("svg-content-responsive", true);
+
   $(".scatter_plot svg").css({top: 500, left: 200, position: "absolute"});
 
   d3.select(".scatter_plot svg")

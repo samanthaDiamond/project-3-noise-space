@@ -46,7 +46,6 @@ var drawHourlyData = function (hourlyData) {
       .domain([0, 7])
       .range([h - top_pad, top_pad]);
 
-
   var svg = d3.select(".bubble_chart")
       .append("svg:svg")
         .attr("width", w + left_pad)

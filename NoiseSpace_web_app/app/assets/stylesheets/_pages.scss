@@ -26,8 +26,14 @@ canvas {
   font-size: 120px;
   text-align: center;
   margin-top: 2em;
-  // font-family: 'Titillium Web', sans-serif;
   letter-spacing: 1.5px;
+
+  @media screen and (max-width: 850px) {
+    font-size: 90px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 60px;
+  }
 }
 
 .welcome-info, .health-info, .noise-experience, .noise-data-info {
@@ -36,26 +42,29 @@ canvas {
   text-align: center;
   margin-top: 230px;
   line-height: 160%;
-  // font-family: 'Titillium Web', sans-serif;
-  // text-transform: uppercase;
   letter-spacing: 1.5px;
 
   span {
     font-size: 32px;
     text-transform: uppercase;
   }
+
+  @media screen and (max-width: 950px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 14px;
+  }
 }
 
 nav {
   display: inline-block;
   margin-top: 10px;
-}
-
-.NoiseSpace-logo {
-  display: inline-block;
-  color: white;
-  font-size: 32px;
-  text-decoration: none;
 }
 
 .DIY-title {
@@ -100,20 +109,29 @@ div.DIY-container {
   border-radius: 10%;
 }
 
-.fadeInNav {
-  display:none;
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: 32px;
-    letter-spacing: 1.5px;
-    margin: 20px 40px 20px 20px
-  }
-}
-
-.fadeInNavDIYPage>a {
-  text-decoration: none;
+.NoiseSpace-logo {
+  display: none;
   color: white;
+  font-size: 32px;
+  text-decoration: none;
   letter-spacing: 1.5px;
-
+  margin: 15px 40px 20px 20px;
 }
+
+// .fadeInNav {
+//   display:none;
+//   a {
+//     text-decoration: none;
+//     color: white;
+//     font-size: 32px;
+//     letter-spacing: 1.5px;
+//     margin: 20px 40px 20px 20px
+//   }
+// }
+
+// .fadeInNavDIYPage>a {
+//   text-decoration: none;
+//   color: white;
+//   letter-spacing: 1.5px;
+//
+// }
