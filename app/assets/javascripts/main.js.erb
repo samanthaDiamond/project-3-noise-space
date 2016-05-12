@@ -10,10 +10,10 @@ window.onload = function() {
 
 // audio functions
 var sound = new Howl({
-  urls: ['/assets/whitenoise.mp3'],
+  urls: ['<%= asset_path "whitenoise.mp3" %>'],
 });
 
 var sound2 = new Howl({
-  urls: ['/assets/Interstellar.mp3'],
+  urls: ['<%= asset_path "Interstellar.mp3" %>'],
   loop: true,
 });
