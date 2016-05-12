@@ -42,6 +42,19 @@ var drawHourlyData = function (hourlyData) {
       .domain([-1, 23])
       .range([left_pad, w - left_pad * 4]);
 
+  var minRadius = 6; // px of smallest circle
+  var maxRadius = 16; // px of biggest circle
+  // get min and max noise measuremnts
+  var noise_extent = d3.extent(hourlyData, function(d){
+    return d.noise;
+  });
+
+  var circle_radius = function (noise) {
+    var m = (maxRadius - minRadius)/(noise_extent[1] - noise_extent[0]);
+    var b = minRadius - m * minRadius;
+    return m*noise+b;
+  };
+
   var y = d3.scale.linear()
       .domain([0, 7])
       .range([h - top_pad, top_pad]);
