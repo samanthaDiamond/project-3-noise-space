@@ -1,0 +1,164 @@
+<canvas id="canvasCells" width="200" height="200"></canvas>
+<h1 class="NoiseSpace-title"></h1>
+<div class="welcome-info"></div>
+<div class="health-info"></div>
+<div class="noise-experience"></div>
+<div class="noise-data-info"></div>
+
+<header class="NoiseSpace-logo">NoiseSpace.</header>
+
+<div class="data-visualisation-container">
+<div class="bubble_chart" style="margin-left: 17%"></div>
+<div class="scatter_plot" style="margin-left: 17%"></div>
+</div>
+<div class="DIY-container">
+  <div class="DIY-content">
+        <div class="steps-text"><h1>MAKE YOUR OWN NOISE MONITOR</h1>
+        <p>All you need to build your own noise monitor is a Tessel 2 and the Ambient Module. The steps that I took to build the noise collector are shown below.</p>
+          <li>1. Head over to the <a href="http://tessel.github.io/t2-start/cmd.html">Tessel</a> web site and work through sections 0-3. It is an excellent introduction that will have you blinking LED's in minutes.</li>
+          <li>2. Now that you have taken the Tessel for a warmup lap lets get started on the noise collector. Connect your Tessel and run the following commands in your terminal:</div>
+<pre code="js-js" class="js-code-sample">
+$ mkdir tessel_noise_collector
+$ cd tessel_noise_collector
+$ t2 init
+</pre>
+    <div class="steps-text"><li>3. The t2 init command will create an index.js file by default that simply flashes an LED. Go ahead and test it.</li></div>
+<pre code="js-js" class="js-code-sample">
+$ t2 run index.js
+</pre>
+          <div class="steps-text"></li>
+          <li>4. You will need the ambient module library to interface with the sensor. We can take advantage of the node package manager (npm) to gather the library for us:</div>
+<pre code="js-js" class="js-code-sample">
+$ npm install ambient-attx4
+</pre>
+          <div class="steps-text"></li>
+          <li>5. We will also need the websocket library so we can connect create a connection to transfer the noise data:</div>
+<pre code="js-js" class="js-code-sample">
+$ npm install nodejs-websocket
+</pre>
+          <div class="steps-text"></li>
+          <li>6. We will need two scripts; one for the Tessel (server) and another for your computer (client) to collect the data. Create them both in the current directory:</div>
+<pre code="js-js" class="js-code-sample">
+$ touch client.js
+$ touch server.js
+</pre>
+          <div class="steps-text"></li>
+          <li>7. Open server.js in your prefered text editor (I like <a href="https://atom.io/">Atom</a>) and copy in the javascript below.</div>
+        <pre code="js-js" class="js-code-sample">
+<div class="filename">/* server.js - run on the Tessel */</div><div class="javascript">
+<span class="hljs-comment">// Grab the required libraries and set the port to 800<wbr></span>
+<span class="hljs-keyword">var</span> tessel = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'tessel'</span>)<wbr>;
+<span class="hljs-keyword">var</span> ambientlib = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'ambient-attx4'</span>)<wbr>;
+
+<span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'nodejs-websocket'</span>)<wbr>;
+<span class="hljs-keyword">var</span> port = <span class="hljs-number">800</span>;
+
+<span class="hljs-comment">// Connect to the ambient sensor.<wbr></span>
+<span class="hljs-keyword">var</span> ambient = ambientlib.<wbr><span class="hljs-keyword">use</span>(<wbr>tessel.<wbr>port[<span class="hljs-string">'A'</span>])<wbr>;
+
+<span class="hljs-comment">// Create the websocket server.<wbr></span>
+<span class="hljs-keyword">var</span> server = ws.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(connection)<wbr></span> </span>{<wbr>
+  <span class="hljs-type">console</span>.log(<wbr><span class="hljs-string">'Accepted new connection...'</span>);
+  <span class="hljs-keyword">var</span> measurements = <wbr>[]<wbr>;
+  <span class="hljs-keyword">var</span> numMeasurements = <wbr><span class="hljs-number">0</span><wbr>;
+  setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()<wbr></span> </span>{
+    tessel.led[<span class="hljs-number">2</span>]<wbr>.off();<wbr>
+    ambient.getSoundLevel(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err, sounddata)<wbr></span> </span>{
+      <span class="hljs-keyword">if</span> (err) {
+        tessel.led[<span class="hljs-number">2</span>].off();
+      } else {
+        measurement.push(sounddata);
+        numMeasurements += <span class="hljs-number">1</span>;
+      }
+    });
+    <span class="hljs-keyword">if</span> (numMeasurements >= <span class="hljs-number">25</span>) {
+      <span class="hljs-keyword">var</span> sum = measurements.reduce(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(a, b)<wbr></span> </span>{<span class="hljs-keyword">return </span>a + b; }
+      <span class="hljs-keyword">var</span> average = sum / numMeasurements;
+      measurements = [];
+      numMeasurements = <span class="hljs-number">0</span>;
+    }
+  }, <span class="hljs-number">200</span>);<span class="hljs-comment">// Get 5 noise readings per second</span>
+
+  connection.on(<wbr><span class="hljs-string">'close'</span>, <wbr><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(code, reason)<wbr></span> </span>{
+    console.log(<span class="hljs-string">'Connection closed'</span>);
+    tessel.led[<span class="hljs-number">2</span>].on();
+  });
+}).listen(port);
+
+console.log(<span class="hljs-string">'Listening on port'</span>, port);
+</div>
+</pre>
+          <div class="steps-text"></li>
+          <li>8. Place the Tessel somewhere it can collect noise data (near a window) and plug it into a usb power supply. Push server.js to the Tessel once it is ready to recieve:</div>
+<pre code="js-js" class="js-code-sample">
+$ t2 push server.js
+</pre>
+          <div class="steps-text"></li>
+          <li>9. Now lets the build the client script that recieves data from the Tessel and stores it in a CSV (Comma Separated Values - just a text file really). Copy the javascript below into client.js and don't forget to amend the file path of the CSV file!</li></div>
+      <pre code="js-js" class="js-code-sample">
+<div class="filename">/* client.js - run on your computer */</div><div class="javascript"><span class="hljs-comment">// The IP address of your Tessel. Find it with `tessel wifi -l` and set it here</span>
+<span class="hljs-keyword">var</span> ipAddress = <span class="hljs-string">'192.168.0.8'</span>;
+
+<span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'nodejs-websocket'</span>)<wbr>;
+<span class="hljs-keyword">var</span> port = <span class="hljs-number">800</span>;
+
+<span class="hljs-comment">// Change the file path to your current wokring directory.<wbr></span>
+<span class="hljs-keyword">var</span> fs = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'fs'</span>)<wbr>;
+<span class="hljs-keyword">var</span> filename = <span class="hljs-string">"C:\\Users\\username\\tessel_noise_collector\\measurements.csv"</span>;
+
+fs.writeFile(filename,<span class="hljs-string">''</span>,<wbr><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err)<wbr></span> </span>{<wbr>
+  <span class="hljs-keyword">if</span> (err) {
+    <span class="hljs-type">console</span>.log(err);
+  }
+});
+
+<wbr><span class="hljs-function"><span class="hljs-keyword">function</span> getDateTime <span class="hljs-params">(<wbr>)<wbr></span> </span>{<wbr>
+  <span class="hljs-keyword">var</span> date = <span class="hljs-keyword">new</span><wbr><span class="hljs-type"> Date </span><wbr>();
+  <span class="hljs-keyword">var</span> hour = <wbr>date.getHours()<wbr>;
+  hour = (hour &lt <span class="hljs-number">10</span> ? <span class="hljs-string">'0'</span> : <span class="hljs-string">''</span>) + hour;
+  <span class="hljs-keyword">var</span> min = <wbr>date.getMinutes()<wbr>;
+  min = (min &lt <span class="hljs-number">10</span> ? <span class="hljs-string">'0'</span> : <span class="hljs-string">''</span>) + min;
+  <span class="hljs-keyword">var</span> sec = <wbr>date.getSeconds()<wbr>;
+  sec = (sec &lt <span class="hljs-number">10</span> ? <span class="hljs-string">'0'</span> : <span class="hljs-string">''</span>) + sec;
+  <span class="hljs-keyword">var</span> year = <wbr>date.getFullYear()<wbr>;
+  <span class="hljs-keyword">var</span> month = <wbr>date.getMonth()<wbr> + <span class="hljs-number">1</span>;
+  month = (month &lt <span class="hljs-number">10</span> ? <span class="hljs-string">'0'</span> : <span class="hljs-string">''</span>) + month;
+  <span class="hljs-keyword">var</span> day = <wbr>date.getDay()<wbr>;
+  day = (day &lt <span class="hljs-number">10</span> ? <span class="hljs-string">'0'</span> : <span class="hljs-string">''</span>) + day;
+  <span class="hljs-keyword">return</span> year + <wbr><span class="hljs-string">'-'</span> + month + <wbr><span class="hljs-string">'-'</span> + day + <wbr><span class="hljs-string">' '</span> + hour + <wbr><span class="hljs-string">':'</span> + min + <wbr><span class="hljs-string">':'</span> + sec;
+}
+
+<span class="hljs-keyword">var</span> addMeasurementToCSV = <wbr><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(<wbr>)<wbr></span> </span>{<wbr>
+  fs.appendFile(filename, getDateTime() + <span class="hljs-string">','</span> + noise + <span class="hljs-string">'\n' , </span><wbr><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err)<wbr></span> </span>{<wbr>
+    <span class="hljs-keyword">if</span> (err) {
+      <span class="hljs-type">console</span>.log(err);
+    }
+  });
+};
+
+console.log(<span class="hljs-string">'Looking for Tessel...'</span>);
+<span class="hljs-comment">// When we get a connection<wbr></span>
+<span class="hljs-keyword">var</span> connection = ws.connect(<span class="hljs-string">'ws://'</span> + ipAddress + <span class="hljs-string">':'</span> + port, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()<wbr></span> </span>{<wbr>
+  console.log(<span class="hljs-string">'Connected to the Tessel!'</span>);
+  connection.on(<span class="hljs-string">'text'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(text)<wbr></span> </span>{<wbr>
+    addMeasurementToCSV(text);
+  });
+  connection.on(<span class="hljs-string">'close'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()<wbr></span> </span>{<wbr>
+    console.log(<span class="hljs-string">'Disconnected from Tessel.'</span>);
+  });
+});
+
+</div>
+</pre>
+          <div class="steps-text"><li>10. The last step is to run the script to connect your computer to the Tessel over the web socket and start logging data (press crtl-C or cmd-C to stop):</div>
+<pre code="js-js" class="js-code-sample">
+$ node client.js
+</pre>
+          <div class="steps-text"></li>
+        <p>I hope you enjoyed the tutorial. I would like to hear from you if you have made it this far. Send me a photo.</p>
+        <h2>Coming Soon...</h2>
+        <p>Saving the data to a desktop is a simple way to start logging data, but it is bit limited since you need a computer within wi-fi range and it has to stay on. Alternatively, we could turn the <a href="http://tessel.github.io/t2-start/webserver.html">Tessel into a webserver</a> and display the current noise levels through a simple web page accessible by any device with a browser (smart phone or tablet).</p>
+        <p>The aim is to go one further. I am currently building a webapp that accepts data from any Tessel, anywhere! All the Tessel needs is an internet connection and it can push the data to the server. Once it begins logging data it will automatically populate this page. Watch this space!</p>
+  </div>
+</div>
+</div>
