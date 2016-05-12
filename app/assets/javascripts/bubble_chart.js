@@ -83,6 +83,7 @@ var drawHourlyData = function (hourlyData) {
           return y(y_pos(d.day) + "");
         })
         .attr("r", function (d) {
+          // return circle_radius(d.noise * 50);
           return d.noise * 50; // 20, 50
         });
 
