@@ -1,31 +1,25 @@
-== README
+# NoiseSpace.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+NoiseSpace was created to raise awareness of noise pollution and the health effects associated with noise exposure.
 
-Things you may want to cover:
+I used a Tessel 2 microcontroller to monitor the noise levels on my street and represented the data collected using D3.js.
+In this app I have included a step-by-step guide for monitoring noise using the Teseel 2 so anyone who is interested can give it a go.
 
-* Ruby version
+### Frameworks / Libraries
+1. Ruby on Rails
+2. jQuery
+3. D3.js
+4. Howler.js
+5. nodejs-websocket
+6. ambient module 
 
-* System dependencies
+### Usage
+1. Clone repo from https://github.com/samanthaDiamond/project-3-noise-space.git
+2. Run `bundle` to install Gems
+3. Run `rake db:migrate` and `rake db:seed` to populate database
+4. Run `rails server` and navigate to `localhost:3000`
 
-* Configuration
+Alternatively, visit https://noise-space.herokuapp.com/
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-
-https://gist.github.com/arjunvenkat/1115bc41bf395a162084
+### Acknowledgements
+A big shout out and thank you to Joel, Jack, Badger, and Luke for your help during the project!!

@@ -4,8 +4,6 @@ function refreshWhitenoise() {
   drawCellsInterval = setInterval(drawCells, 100);
 }
 
-// TODO: convert to jquery
-
 function drawCells() {
   var ctx = document.getElementById('canvasCells').getContext('2d');
   for (var y = 0; y <= 200; y++) {
