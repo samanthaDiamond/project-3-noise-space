@@ -11,41 +11,39 @@
 <div class="bubble_chart" style="margin-left: 17%"></div>
 <div class="scatter_plot" style="margin-left: 17%"></div>
 </div>
-
 <div class="DIY-container">
   <div class="DIY-content">
-        <h1>Tessel DIY</h1>
+        <div class="steps-text"><h1>MAKE YOUR OWN NOISE MONITOR</h1>
         <p>All you need to build your own noise monitor is a Tessel 2 and the Ambient Module. The steps that I took to build the noise collector are shown below.</p>
-        <ol>
           <li>Head over to the <a href="http://tessel.github.io/t2-start/cmd.html">Tessel</a> web site and work through sections 0-3. It is an excellent introduction that will have you blinking LED's in minutes.</li>
-          <li>Now that you have taken the Tessel for a warmup lap lets get started on the noise collector. Connect your Tessel and run the following commands in your terminal:
+          <li>Now that you have taken the Tessel for a warmup lap lets get started on the noise collector. Connect your Tessel and run the following commands in your terminal:</div>
 <pre code="js-js" class="js-code-sample">
 $ mkdir tessel_noise_collector
 $ cd tessel_noise_collector
 $ t2 init
 </pre>
-    The t2 init command will create an index.js file by default that simply flashes an LED. Go ahead and test it.
+    <div class="steps-text"><li>The t2 init command will create an index.js file by default that simply flashes an LED. Go ahead and test it.</li></div>
 <pre code="js-js" class="js-code-sample">
 $ t2 run index.js
 </pre>
-          </li>
-          <li>You will need the ambient module library to interface with the sensor. We can take advantage of the node package manager (npm) to gather the library for us:
+          <div class="steps-text"></li>
+          <li>You will need the ambient module library to interface with the sensor. We can take advantage of the node package manager (npm) to gather the library for us:</div>
 <pre code="js-js" class="js-code-sample">
 $ npm install ambient-attx4
 </pre>
-          </li>
-          <li>We will also need the websocket library so we can connect create a connection to transfer the noise data:
+          <div class="steps-text"></li>
+          <li>We will also need the websocket library so we can connect create a connection to transfer the noise data:</div>
 <pre code="js-js" class="js-code-sample">
 $ npm install nodejs-websocket
 </pre>
-          </li>
-          <li>We will need two scripts; one for the Tessel (server) and another for your computer (client) to collect the data. Create them both in the current directory:
+          <div class="steps-text"></li>
+          <li>We will need two scripts; one for the Tessel (server) and another for your computer (client) to collect the data. Create them both in the current directory:</div>
 <pre code="js-js" class="js-code-sample">
 $ touch client.js
 $ touch server.js
 </pre>
-          </li>
-          <li>Open server.js in your prefered text editor (I like <a href="https://atom.io/">Atom</a>) and copy in the javascript below.
+          <div class="steps-text"></li>
+          <li>Open server.js in your prefered text editor (I like <a href="https://atom.io/">Atom</a>) and copy in the javascript below.</div>
         <pre code="js-js" class="js-code-sample">
 <div class="filename">/* server.js - run on the Tessel */</div><div class="javascript">
 <span class="hljs-comment">// Grab the required libraries and set the port to 800<wbr></span>
@@ -90,13 +88,13 @@ $ touch server.js
 console.log(<span class="hljs-string">'Listening on port'</span>, port);
 </div>
 </pre>
-          </li>
-          <li>Place the Tessel somewhere it can collect noise data (near a window) and plug it into a usb power supply. Push server.js to the Tessel once it is ready to recieve:
+          <div class="steps-text"></li>
+          <li>Place the Tessel somewhere it can collect noise data (near a window) and plug it into a usb power supply. Push server.js to the Tessel once it is ready to recieve:</div>
 <pre code="js-js" class="js-code-sample">
 $ t2 push server.js
 </pre>
-          </li>
-          <li>Now lets the build the client script that recieves data from the Tessel and stores it in a CSV (Comma Separated Values - just a text file really). Copy the javascript below into client.js and don't forget to amend the file path of the CSV file!</li>
+          <div class="steps-text"></li>
+          <li>Now lets the build the client script that recieves data from the Tessel and stores it in a CSV (Comma Separated Values - just a text file really). Copy the javascript below into client.js and don't forget to amend the file path of the CSV file!</li></div>
       <pre code="js-js" class="js-code-sample">
 <div class="filename">/* client.js - run on your computer */</div><div class="javascript"><span class="hljs-comment">// The IP address of your Tessel. Find it with `tessel wifi -l` and set it here</span>
 <span class="hljs-keyword">var</span> ipAddress = <span class="hljs-string">'192.168.0.8'</span>;
@@ -152,15 +150,16 @@ console.log(<span class="hljs-string">'Looking for Tessel...'</span>);
 
 </div>
 </pre>
-          <li>The last step is to run the script to connect your computer to the Tessel over the web socket and start logging data (press crtl-C or cmd-C to stop):
+          <div class="steps-text"><li>The last step is to run the script to connect your computer to the Tessel over the web socket and start logging data (press crtl-C or cmd-C to stop):</div>
 <pre code="js-js" class="js-code-sample">
 $ node client.js
 </pre>
-          </li>
+          <div class="steps-text"></li>
         </ol>
         <p>I hope you enjoyed the tutorial. I would like to hear from you if you have made it this far. Send me a photo.</p>
         <h2>Coming Soon...</h2>
         <p>Saving the data to a desktop is a simple way to start logging data, but it is bit limited since you need a computer within wi-fi range and it has to stay on. Alternatively, we could turn the <a href="http://tessel.github.io/t2-start/webserver.html">Tessel into a webserver</a> and display the current noise levels through a simple web page accessible by any device with a browser (smart phone or tablet).</p>
         <p>The aim is to go one further. I am currently building a webapp that accepts data from any Tessel, anywhere! All the Tessel needs is an internet connection and it can push the data to the server. Once it begins logging data it will automatically populate this page. Watch this space!</p>
   </div>
+</div>
 </div>
