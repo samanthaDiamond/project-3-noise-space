@@ -30,7 +30,6 @@ AllMeasurements.each do |m|
   day = days[m.datetime.wday]
   hour = m.datetime.hour
   bin = Hourly_Average.find_by("day = ? AND time = ?", day, hour)
-  hourlyAvgNoise = Hourly_Average.all
   bin.noise += m.dB
   bin.num_measurements += 1
   bin.save
