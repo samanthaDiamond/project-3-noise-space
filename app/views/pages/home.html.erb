@@ -13,12 +13,12 @@
 </div>
 <div class="DIY-container">
   <div class="DIY-content">
-        <div class="steps-text"><h1>MAKE YOUR OWN NOISE MONITOR</h1>
+        <div class="steps-text"><h1 class="DIY-heading">MAKE YOUR OWN NOISE MONITOR</h1>
         <div class="tessel2-pic-container">
             <div class="tessel2-pic"> <%= image_tag 'tessel2.jpg' %></div>
         </div>
         <p>All you need to build your own noise monitor is a Tessel 2 and the Ambient Module. The steps that I took to build the noise collector are shown below.</p>
-          <li>1. Head over to the <a href="http://tessel.github.io/t2-start/cmd.html">Tessel</a> web site and work through sections 0-3. It is an excellent introduction that will have you blinking LED's in minutes.</li>
+          <li>1. Head over to the <a href="http://tessel.github.io/t2-start/cmd.html">Tessel</a> website and work through sections 0-3. It is an excellent introduction that will have you blinking LED's in minutes.</li>
           <li>2. Now that you have taken the Tessel for a warmup lap lets get started on the noise collector. Connect your Tessel and run the following commands in your terminal:</div>
 <pre code="js-js" class="js-code-sample">
 $ mkdir tessel_noise_collector
@@ -35,7 +35,7 @@ $ t2 run index.js
 $ npm install ambient-attx4
 </pre>
           <div class="steps-text"></li>
-          <li>5. We will also need the websocket library so we can connect create a connection to transfer the noise data:</div>
+          <li>5. We will also need the websocket library so we can create a connection to transfer the noise data:</div>
 <pre code="js-js" class="js-code-sample">
 $ npm install nodejs-websocket
 </pre>
@@ -54,7 +54,7 @@ $ touch server.js
 <span class="hljs-keyword">var</span> ambientlib = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'ambient-attx4'</span>)<wbr>;
 
 <span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'nodejs-websocket'</span>)<wbr>;
-<span class="hljs-keyword">var</span> port = <span class="hljs-number">800</span>;
+<span class="hljs-keyword">var</span> port = <span class="hljs-number">8000</span>;
 
 <span class="hljs-comment">// Connect to the ambient sensor.<wbr></span>
 <span class="hljs-keyword">var</span> ambient = ambientlib.<wbr><span class="hljs-keyword">use</span>(<wbr>tessel.<wbr>port[<span class="hljs-string">'A'</span>])<wbr>;
@@ -97,13 +97,13 @@ console.log(<span class="hljs-string">'Listening on port'</span>, port);
 $ t2 push server.js
 </pre>
           <div class="steps-text"></li>
-          <li>9. Now lets the build the client script that recieves data from the Tessel and stores it in a CSV (Comma Separated Values - just a text file really). Copy the javascript below into client.js and don't forget to amend the file path of the CSV file!</li></div>
+          <li>9. Now lets build the client script that recieves data from the Tessel and stores it in a CSV (Comma Separated Values - just a text file really). Copy the javascript below into client.js and don't forget to amend the file path of the CSV file!</li></div>
       <pre code="js-js" class="js-code-sample">
 <div class="filename">/* client.js - run on your computer */</div><div class="javascript"><span class="hljs-comment">// The IP address of your Tessel. Find it with `tessel wifi -l` and set it here</span>
 <span class="hljs-keyword">var</span> ipAddress = <span class="hljs-string">'192.168.0.8'</span>;
 
 <span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'nodejs-websocket'</span>)<wbr>;
-<span class="hljs-keyword">var</span> port = <span class="hljs-number">800</span>;
+<span class="hljs-keyword">var</span> port = <span class="hljs-number">8000</span>;
 
 <span class="hljs-comment">// Change the file path to your current wokring directory.<wbr></span>
 <span class="hljs-keyword">var</span> fs = <span class="hljs-keyword">require</span>(<wbr><span class="hljs-string">'fs'</span>)<wbr>;

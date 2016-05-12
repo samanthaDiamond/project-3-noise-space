@@ -42,8 +42,8 @@ var drawHourlyData = function (hourlyData) {
       .domain([-1, 23])
       .range([left_pad, w - left_pad * 4]);
 
-  var minRadius = 6; // px of smallest circle
-  var maxRadius = 16; // px of biggest circle
+  var minRadius = 4; // px of smallest circle
+  var maxRadius = 14; // px of biggest circle
   // get min and max noise measuremnts
   var noise_extent = d3.extent(hourlyData, function(d){
     return d.noise;
@@ -51,7 +51,7 @@ var drawHourlyData = function (hourlyData) {
 
   var circle_radius = function (noise) {
     var m = (maxRadius - minRadius)/(noise_extent[1] - noise_extent[0]);
-    var b = minRadius - m * minRadius;
+    var b = minRadius - m * noise_extent[0];
     return m*noise+b;
   };
 
@@ -83,8 +83,8 @@ var drawHourlyData = function (hourlyData) {
           return y(y_pos(d.day) + "");
         })
         .attr("r", function (d) {
-          // return circle_radius(d.noise * 50);
-          return d.noise * 50; // 20, 50
+          return circle_radius(d.noise );
+          // return d.noise * 50; // 20, 50
         });
 
   var xAxis = d3.svg.axis().scale(x).orient("bottom")
