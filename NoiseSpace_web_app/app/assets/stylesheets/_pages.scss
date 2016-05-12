@@ -1,0 +1,202 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// * {
+//   font-family: 'Titillium Web', sans-serif;
+// }
+
+body {
+  background: #1C2124;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.NoiseSpace-title {
+  color: white;
+  font-size: 120px;
+  text-align: center;
+  margin-top: 2em;
+  letter-spacing: 1.5px;
+  font-family: 'Titillium Web', sans-serif;
+
+  @media screen and (max-width: 850px) {
+    font-size: 90px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 60px;
+  }
+}
+
+.welcome-info, .health-info, .noise-experience, .noise-data-info {
+  color: #DDDDDD;
+  font-size: 24px;
+  text-align: center;
+  margin: 20%;
+  // margin-top: 230px;
+  line-height: 160%;
+  letter-spacing: 1.5px;
+  font-family: 'Titillium Web', sans-serif;
+
+  span {
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 950px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 10px;
+  }
+}
+
+// nav {
+//   display: inline-block;
+//   margin-top: 10px;
+// }
+
+// .DIY-title {
+//   color: white;
+//   text-transform: uppercase;
+//   font-size: 32px;
+//   letter-spacing: 1.8px;
+//   text-align: center;
+//   margin: 50px;
+// }
+
+// .DIY-link {
+//   display: inline-block;
+//   position: absolute;
+//   right: 0;
+//   top: 5px;
+// }
+
+.tessel2-pic {
+  margin: 50px;
+  text-align: center
+}
+
+.tessel2-pic>img {
+  border-radius: 10%;
+  width: 23em;
+  height: 20em;
+}
+
+// .text-box {
+//   height: 1.5em;
+//   width: 3em;
+//   color: black;
+//   background-color: white;
+//   padding: 15px;
+//   border-radius: 10%;
+// }
+
+.NoiseSpace-logo {
+  display: none;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  margin: 15px 40px 20px 20px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.DIY-container {
+  display: none;
+  width: vw;
+  height: wh;
+  margin-top: 50em;
+  background-color: white;
+
+  div.DIY-content {
+    margin: 5em 10em;
+    font: #1C2124;
+  }
+}
+
+// txt editor format css
+
+.steps-text {
+  font-family: 'Titillium Web', sans-serif;
+  width: 95%;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.js-code-sample {
+  background:#1c2124;
+  color:#f8f8f2;
+  width: 95%;
+  border-radius: 1%;
+  padding: 15px
+}
+
+.filename {
+	font-weight: bold;
+	color: #00B200;
+}
+
+.hljs {
+	display:block;
+	overflow-x:auto;
+	padding:0.5em;
+	background:#23241f;
+	-webkit-text-size-adjust:none
+}
+.hljs,.hljs-tag,.css .hljs-rules,.css .hljs-value,.aspectj .hljs-function,.css .hljs-function .hljs-preprocessor,.hljs-pragma {
+	color:#f8f8f2
+}
+.hljs-strongemphasis,.hljs-strong,.hljs-emphasis {
+	color:#a8a8a2
+}
+.hljs-bullet,.hljs-blockquote,.hljs-horizontal_rule,.hljs-number,.hljs-regexp,.alias .hljs-keyword,.hljs-literal,.hljs-hexcolor {
+	color:#ae81ff
+}
+.hljs-tag .hljs-value,.hljs-code,.hljs-title,.css .hljs-class,.hljs-class .hljs-title:last-child {
+	color:#a6e22e
+}
+.hljs-link_url {
+	font-size:80%
+}
+.hljs-strong,.hljs-strongemphasis {
+	font-weight:bold
+}
+.hljs-emphasis,.hljs-strongemphasis,.hljs-class .hljs-title:last-child,.hljs-typename {
+	font-style:italic
+}
+.hljs-keyword,.ruby .hljs-class .hljs-keyword:first-child,.ruby .hljs-function .hljs-keyword,.hljs-function,.hljs-change,.hljs-winutils,.hljs-flow,.nginx .hljs-title,.tex .hljs-special,.hljs-header,.hljs-attribute,.hljs-symbol,.hljs-symbol .hljs-string,.hljs-tag .hljs-title,.hljs-value,.alias .hljs-keyword:first-child,.css .hljs-tag,.css .unit,.css .hljs-important {
+	color:#f92672
+}
+.hljs-function .hljs-keyword,.hljs-class .hljs-keyword:first-child,.hljs-aspect .hljs-keyword:first-child,.hljs-constant,.hljs-typename,.css .hljs-attribute {
+	color:#66d9ef
+}
+.hljs-variable,.hljs-params,.hljs-class .hljs-title,.hljs-aspect .hljs-title {
+	color:#f8f8f2
+}
+.hljs-string,.css .hljs-id,.hljs-subst,.hljs-type,.ruby .hljs-class .hljs-parent,.hljs-built_in,.django .hljs-template_tag,.django .hljs-variable,.smalltalk .hljs-class,.django .hljs-filter .hljs-argument,.smalltalk .hljs-localvars,.smalltalk .hljs-array,.hljs-attr_selector,.hljs-pseudo,.hljs-addition,.hljs-stream,.hljs-envvar,.apache .hljs-tag,.apache .hljs-cbracket,.tex .hljs-command,.hljs-prompt,.hljs-link_label,.hljs-link_url {
+	color:#e6db74
+}
+.hljs-comment,.hljs-javadoc,.hljs-annotation,.hljs-decorator,.hljs-pi,.hljs-doctype,.hljs-deletion,.hljs-shebang,.apache .hljs-sqbracket,.tex .hljs-formula {
+	color:#75715e
+}
+.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata,.xml .php,.php .xml {
+	opacity:0.5
+}
