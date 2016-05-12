@@ -41,10 +41,10 @@ d3.select(".scatter_plot")
     .attr("class","scatter-plot-title")
   .text("DAILY NOISE MEASUREMENTS")
     // .attr("x", width / 3.2)
-    .attr("x", width / 5)
+    .attr("x", width / 4.3)
     .attr("y", margin/ 1.5)
     .style("fill", "white")
-    .style("font-size", "24px");
+    .style("font-size", "22px");
 
     parseDatetime = d3.time.format("%Y-%m-%d %H:%M:%S").parse;
 
@@ -158,7 +158,6 @@ $.ajax({
 
     minX = dataset[0].datetime;
     maxX = dataset[1].datetime;
-    // console.log( minX, maxX );
     maxX.setTime(minX.getTime()+graphTimeWidth);
   }
 });

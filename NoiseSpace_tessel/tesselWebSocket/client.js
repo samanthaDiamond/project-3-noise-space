@@ -42,22 +42,14 @@ var addMeasurementToCSV = function (noise) {
   });
 };
 
-var noSample = 0;
-
+console.log("Looking for Tessel...");
 // When we get a connection
 var connection = ws.connect('ws://' + ipAddress + ':' + port, function() {
   console.log('Connected to the Tessel!');
-  // When we get text back
   connection.on('text', function(text) {
-    // print it out
     addMeasurementToCSV(text);
-    noSample += 1;
-    if (noSample%1000 === 0) {
-      console.log(noSample,getDateTime());
-    }
   });
   connection.on('close', function() {
-    db.close();
+    console.log("Disconnected from the Tessel.");
   });
-
 });

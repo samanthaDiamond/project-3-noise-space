@@ -10,7 +10,7 @@ var ambientlib = require('ambient-attx4');
 var ambient = ambientlib.use(tessel.port['A']);
 
 // Create the websocket server, provide connection callback
-var server = ws.createServer(function(conn) {
+var server = ws.createServer(function(connection) {
   console.log('Accepted new connection...');
   // If get a binary stream is opened up
   var measurements = [];
@@ -23,20 +23,22 @@ var server = ws.createServer(function(conn) {
       } else {
         measurements.push(sounddata);
         numMeasurements += 1;
-        // console.log(numMeasurements);
       }
     });
     if (numMeasurements >= 25) {
-      // console.log('calc average');
+      // calculate average of last 25 measurements taken over 5 seconds.
       var sum = measurements.reduce(function(a, b) { return a + b; });
       var average = sum / numMeasurements;
-      conn.sendText(average.toString());
+      // send average noise reading to client.
+      connection.sendText(average.toString());
+      // reset measurements array and counter
       measurements = [];
       numMeasurements = 0;
     }
-  }, 200); // The readings will happen every 0.1 seconds
+  }, 200); // 5 noise readings per second.
 
-  conn.on("close", function(code, reason) {
+  Connection.on("close", function(code, reason) {
+    tessel.led[2].on();
     console.log("Connection closed");
   });
 }).listen(port);

@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-* {
-  font-family: 'Titillium Web', sans-serif;
-}
+// * {
+//   font-family: 'Titillium Web', sans-serif;
+// }
 
 body {
   background: #1C2124;
@@ -19,6 +19,7 @@ canvas {
   margin: 0;
   position: absolute;
   top: 0;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 .NoiseSpace-title {
@@ -27,6 +28,7 @@ canvas {
   text-align: center;
   margin-top: 2em;
   letter-spacing: 1.5px;
+  font-family: 'Titillium Web', sans-serif;
 
   @media screen and (max-width: 850px) {
     font-size: 90px;
@@ -43,6 +45,7 @@ canvas {
   margin-top: 230px;
   line-height: 160%;
   letter-spacing: 1.5px;
+  font-family: 'Titillium Web', sans-serif;
 
   span {
     font-size: 32px;
@@ -62,32 +65,26 @@ canvas {
   }
 }
 
-nav {
-  display: inline-block;
-  margin-top: 10px;
-}
+// nav {
+//   display: inline-block;
+//   margin-top: 10px;
+// }
 
-.DIY-title {
-  color: white;
-  text-transform: uppercase;
-  font-size: 32px;
-  letter-spacing: 1.8px;
-  text-align: center;
-  margin: 50px;
-}
+// .DIY-title {
+//   color: white;
+//   text-transform: uppercase;
+//   font-size: 32px;
+//   letter-spacing: 1.8px;
+//   text-align: center;
+//   margin: 50px;
+// }
 
-.DIY-link {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 5px;
-}
-
-div.DIY-container {
-  color: white;
-  font-size: 18px;
-  margin: 50px;
-}
+// .DIY-link {
+//   display: inline-block;
+//   position: absolute;
+//   right: 0;
+//   top: 5px;
+// }
 
 .tessel2-pic {
   margin: 50px;
@@ -100,23 +97,41 @@ div.DIY-container {
   height: 20em;
 }
 
-.text-box {
-  height: 1.5em;
-  width: 3em;
-  color: black;
-  background-color: white;
-  padding: 15px;
-  border-radius: 10%;
-}
+// .text-box {
+//   height: 1.5em;
+//   width: 3em;
+//   color: black;
+//   background-color: white;
+//   padding: 15px;
+//   border-radius: 10%;
+// }
 
 .NoiseSpace-logo {
   display: none;
   color: white;
-  font-size: 32px;
+  font-size: 24px;
   text-decoration: none;
   letter-spacing: 1.5px;
   margin: 15px 40px 20px 20px;
+  font-family: 'Titillium Web', sans-serif;
 }
+
+.DIY-container {
+  display: none;
+  width: vw;
+  height: wh;
+  margin-top: 50em;
+  background-color: white;
+
+  div.DIY-content {
+    margin: 5em 10em;
+    font: #1C2124;
+  }
+}
+//
+// div.DIY-content {
+//   margin: 10em;
+// }
 
 // .fadeInNav {
 //   display:none;

@@ -53,9 +53,10 @@ function noiseExperience() {
 }
 
 function noiseDataMessage() {
-  var noiseDataMessage = "I monitored the noise levels in my street for 10 days using a Tessel2<br>microcontroller. You are about to see a representation of the data <br>from my experiment along with a step-by-step guide for replicating<br>this experiment so you can give it a go yourself.<br>";
+  var noiseDataMessage = "I monitored the noise levels in my street for 10 days using a Tessel2<br>microcontroller. You are about to see the data visuals<br>from my experiment along with a step-by-step guide for replicating<br>this experiment so you can give it a go yourself.<br>";
   $('.noise-data-info').append('<p noise-data-message>'+ noiseDataMessage +'</p>').fadeOut(0).fadeIn(1000).delay(1000).fadeOut(1000, function () {
       $('.NoiseSpace-logo').css('display', 'inline-block').fadeOut(0).fadeIn(1000);
+      $('.DIY-container').css('display', 'inline-block').fadeOut(0).fadeIn(1000);
       drawHourlyData(hourlyData);
       draw(dataset);
     });
