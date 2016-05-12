@@ -1,6 +1,6 @@
 window.onload = function() {
   // sound.play().fade(1, 0, 8000);
-  sound.play().fade(1, 0, 8000, function () {
+  sound.play().fade(0.6, 0, 8000, function () {
       sound2.play().fade(0, 0.5, 0);
   });
   refreshWhitenoise();
