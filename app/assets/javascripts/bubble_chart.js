@@ -42,8 +42,8 @@ var drawHourlyData = function (hourlyData) {
       .domain([-1, 23])
       .range([left_pad, w - left_pad * 4]);
 
-  var minRadius = 4; // px of smallest circle
-  var maxRadius = 14; // px of biggest circle
+  var minRadius = 4;
+  var maxRadius = 14;
   var noise_extent = d3.extent(hourlyData, function(d){
     return d.noise;
   });
@@ -133,7 +133,6 @@ var drawHourlyData = function (hourlyData) {
        }
        return returnColor;
     });
-
 };
 
 $.ajax({
