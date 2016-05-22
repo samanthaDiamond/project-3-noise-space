@@ -4,6 +4,7 @@ var ipAddress = '192.168.0.8';
 var ws = require('nodejs-websocket');
 var port = 8000;
 
+// fs library that allows you to read and write to files
 var fs = require("fs");
 var filename = "C:\\Users\\your\\Desktop\\Tessel\\" + "measurements.csv";
 

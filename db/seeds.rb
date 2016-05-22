@@ -18,6 +18,7 @@ Hourly_Average.destroy_all
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 hours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
 
+# creating empty bin for each day and hour
 days.each do |day|
   hours.each do |hour|
     Hourly_Average.create(day: day, time: hour, noise: 0, num_measurements: 0)
@@ -26,6 +27,7 @@ end
 
 AllMeasurements = Measurement.all
 
+# put each measurement in correct bin
 AllMeasurements.each do |m|
   day = days[m.datetime.wday]
   hour = m.datetime.hour
@@ -37,6 +39,7 @@ end
 
 bins = Hourly_Average.all
 
+# calculate average measurement for each bin 
 bins.each do |b|
   b.noise = b.noise / b.num_measurements
   b.save

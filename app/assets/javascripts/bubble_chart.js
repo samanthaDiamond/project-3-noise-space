@@ -1,34 +1,14 @@
 var hourlyData;
 
-function y_pos(day) {
-  var pos;
-  switch (day){
-  case 'Monday':
-    pos = 1;
-    break;
-  case 'Tuesday':
-    pos = 2;
-    break;
-  case 'Wednesday':
-    pos = 3;
-    break;
-  case 'Thursday':
-    pos = 4;
-    break;
-  case 'Friday':
-    pos = 5;
-    break;
-  case 'Saturday':
-    pos = 6;
-    break;
-  case 'Sunday':
-    pos = 7;
-    break;
-  default:
-    console.log("Invalid input.");
-  }
-  return pos;
-}
+var y_pos = {
+  "Monday" : 1,
+  "Tuesday" : 2,
+  "Wednesday" : 3,
+  "Thursday" : 4,
+  "Friday" : 5,
+  "Saturday" : 6,
+  "Sunday" :7
+};
 
 var drawHourlyData = function (hourlyData) {
 
@@ -39,8 +19,8 @@ var drawHourlyData = function (hourlyData) {
       margin = 50;
 
   var x = d3.scale.linear()
-      .domain([-1, 23])
-      .range([left_pad, w - left_pad * 4]);
+      .domain([-1, 23]) // scale for max and min data value
+      .range([left_pad, w - left_pad * 4]); // scale for max and min svg values
 
   var minRadius = 4;
   var maxRadius = 14;
@@ -48,10 +28,11 @@ var drawHourlyData = function (hourlyData) {
     return d.noise;
   });
 
+  // radius = k * noise + b
   var circle_radius = function (noise) {
-    var m = (maxRadius - minRadius)/(noise_extent[1] - noise_extent[0]);
-    var b = minRadius - m * noise_extent[0];
-    return m*noise+b;
+    var k = (maxRadius - minRadius)/(noise_extent[1] - noise_extent[0]); // k = rise / run (slope)
+    var b = minRadius - k * noise_extent[0]; // y-offset
+    return k * noise + b;
   };
 
   var y = d3.scale.linear()
@@ -68,16 +49,17 @@ var drawHourlyData = function (hourlyData) {
 
   svg.selectAll(".bubble_chart circle")
       .data(hourlyData)
-      .enter().append("circle")
+      .enter()
+      .append("circle")
         .attr("class", "dot")
         .attr("cx", function (d) {
           return x(d.time);
         })
         .attr("cy", function (d) {
-          return y(y_pos(d.day) + "");
+          return y(y_pos[d.day] + "");
         })
         .attr("r", function (d) {
-          return circle_radius(d.noise );
+          return circle_radius(d.noise);
         });
 
   var xAxis = d3.svg.axis().scale(x).orient("bottom")
@@ -115,23 +97,16 @@ var drawHourlyData = function (hourlyData) {
 
   d3.selectAll(".bubble_chart circle")
     .style("fill", function(d) {
-       var returnColor;
-       if (y_pos(d.day) === 1) {  // #FF079B
-         returnColor = "#FF079B"; // #FF26C6
-       } else if (y_pos(d.day) === 2) {
-         returnColor = "#FF26C6"; // #DB1DE8
-       } else if (y_pos(d.day) === 3) {
-         returnColor = "#DB1DE8"; // #C72CFF
-       } else if (y_pos(d.day) === 4) {
-         returnColor = "#C72CFF"; // #881DE8
-       } else if (y_pos(d.day) === 5) {
-         returnColor = "#C617E8"; // #C617E8
-       } else if (y_pos(d.day) === 6) {
-         returnColor = "#881DE8";  // #DA14FF
-       } else {
-         returnColor = "#6615E8"; // #05E9FF
-       }
-       return returnColor;
+       var color = {
+         "Monday" : "#FF079B",
+         "Tuesday" : "#FF26C6",
+         "Wednesday" : "#DB1DE8",
+         "Thursday" : "#C72CFF",
+         "Friday" : "#C617E8",
+         "Saturday" : "#881DE8",
+         "Sunday" : "#6615E8"
+       };
+       return color[d.day];
     });
 };
 

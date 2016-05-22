@@ -3,7 +3,7 @@
 NoiseSpace was created to raise awareness of noise pollution and the health effects associated with noise exposure.
 
 I used a Tessel 2 microcontroller to monitor the noise levels on my street and represented the data collected using D3.js.
-In this app I have included a step-by-step guide for monitoring noise using the Teseel 2 so anyone who is interested can give it a go.
+In this app I have included a step-by-step guide for monitoring noise using the Tessel 2 so anyone who is interested can give it a go.
 
 ### Frameworks / Libraries
 1. Ruby on Rails
@@ -11,7 +11,7 @@ In this app I have included a step-by-step guide for monitoring noise using the 
 3. D3.js
 4. Howler.js
 5. nodejs-websocket
-6. ambient module 
+6. ambient module
 
 ### Usage
 1. Clone repo from https://github.com/samanthaDiamond/project-3-noise-space.git
